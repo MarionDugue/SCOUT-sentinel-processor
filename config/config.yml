@@ -1,0 +1,10 @@
+# config.yml
+
+input:
+  aoi_path: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/kml/Eitelsried_Fields_kml"
+  start_date: "2025-04-20"
+  end_date: "2025-05-10"
+  cloud_threshold: 20
+
+output:
+  base_dir: "/home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data"

@@ -1,0 +1,7 @@
+2025-05-26 11:55:34,805 - INFO - Starting NDVI export for KML: --aoi
+2025-05-26 11:55:34,805 - INFO - Output directory: ./NDVI_output/--aoi_NDVI
+2025-05-26 11:55:34,805 - ERROR - Unhandled error in NDVI export: export_ndvi() got an unexpected keyword argument 'kml_path'
+Traceback (most recent call last):
+  File "/home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel2/cli.py", line 42, in main
+    ndvi_exporter.export_ndvi(
+TypeError: export_ndvi() got an unexpected keyword argument 'kml_path'
