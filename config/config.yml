@@ -9,3 +9,7 @@ input:
 output:
   base_dir: "../data"
 
+sentinel2:
+  surface_reflectance: "COPERNICUS/S2_SR_HARMONIZED"
+  cloud_probability: "COPERNICUS/S2_CLOUD_PROBABILITY"
+

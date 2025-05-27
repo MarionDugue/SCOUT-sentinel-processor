@@ -14,7 +14,6 @@ import ee
 import geopandas as gpd
 from shapely.geometry import Polygon, MultiPolygon
 
-import config
 
 import logging
 
@@ -64,19 +63,17 @@ def attach_cloud_metadata(pair, geom, thresh):
 
 def export_ndvi(
     aoi_path,
-    start_date=None,
-    end_date=None,
-    output_dir=None,
-    cloud_threshold=None,
+    start_date,
+    end_date,
+    output_dir,
+    cloud_threshold,
+    s2_sr_collection,
+    s2_cp_collection,
     layer=None
 ):
     """Export daily-averaged Sentinel-2 NDVI GeoTIFFs clipped to AOI."""
 
-    start_date = start_date or config.DEFAULT_START
-    end_date = end_date or config.DEFAULT_END
-    cloud_threshold = (
-        cloud_threshold if cloud_threshold is not None else config.CLOUD_THRESHOLD
-    )
+ 
     try:
         ee.Initialize()
 
@@ -87,7 +84,7 @@ def export_ndvi(
         aoi_name = re.sub(r'[^A-Za-z0-9_-]', '_', raw_name)
 
         s2_sr = (
-            ee.ImageCollection(config.S2_COLLECTION)
+            ee.ImageCollection(s2_sr_collection)
             .filterDate(start_date, end_date)
             .filterBounds(geom)
             .map(calculate_ndvi)
@@ -95,7 +92,7 @@ def export_ndvi(
         )
 
         s2_cp = (
-            ee.ImageCollection('COPERNICUS/S2_CLOUD_PROBABILITY')
+            ee.ImageCollection(s2_cp_collection)
             .filterDate(start_date, end_date)
             .filterBounds(geom)
         )

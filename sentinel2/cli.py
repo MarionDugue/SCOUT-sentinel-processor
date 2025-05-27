@@ -32,6 +32,10 @@ def main():
     end_date = cfg["input"]["end_date"]
     cloud = cfg["input"]["cloud_threshold"]
 
+    s2_sr_collection = cfg["sentinel2"]["surface_reflectance"]
+    s2_cp_collection = cfg["sentinel2"]["cloud_probability"]
+
+
     # Check if aoi_path is a directory or a file
     if os.path.isdir(aoi_path):
         kml_files = glob.glob(os.path.join(aoi_path, "*.kml"))
@@ -54,6 +58,8 @@ def main():
                 end_date=end_date,
                 cloud_threshold=cloud,
                 output_dir=out_dir,
+                s2_sr_collection=s2_sr_collection,
+                s2_cp_collection=s2_cp_collection
             )
 
         logging.info("NDVI export completed successfully for all AOIs.")
