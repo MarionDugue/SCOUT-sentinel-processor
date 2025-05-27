@@ -11,20 +11,26 @@ def parse_args():
     parser.add_argument("--config", required=True, help="Path to YAML config file")
     return parser.parse_args()
 
+def make_absolute(path, base_dir):
+    return path if os.path.isabs(path) else os.path.abspath(os.path.join(base_dir, path))
+
 def main():
     logging.basicConfig(filename="ndvi_export.log", level=logging.INFO)
 
     args = parse_args()
+    config_path = os.path.abspath(args.config)
+    config_dir = os.path.dirname(config_path)
 
     # Load YAML config
-    with open(args.config, "r") as f:
+    with open(config_path, "r") as f:
         cfg = yaml.safe_load(f)
 
-    aoi_path = cfg["input"]["aoi_path"]
+    # Resolve paths relative to config file
+    aoi_path = make_absolute(cfg["input"]["aoi_path"], config_dir)
+    base_out_dir = make_absolute(cfg["output"]["base_dir"], config_dir)
     start_date = cfg["input"]["start_date"]
     end_date = cfg["input"]["end_date"]
     cloud = cfg["input"]["cloud_threshold"]
-    base_out_dir = cfg["output"]["base_dir"]
 
     # Check if aoi_path is a directory or a file
     if os.path.isdir(aoi_path):
@@ -37,7 +43,6 @@ def main():
 
     try:
         for kml_file in kml_files:
-            # Create an output directory for each KML
             basename = os.path.splitext(os.path.basename(kml_file))[0]
             out_dir = os.path.join(base_out_dir, f"{basename}_NDVI")
             os.makedirs(out_dir, exist_ok=True)

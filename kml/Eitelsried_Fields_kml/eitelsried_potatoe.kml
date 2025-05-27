@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="potato" id="potato">
+	<SimpleField name="timestamp" type="string"></SimpleField>
+	<SimpleField name="begin" type="string"></SimpleField>
+	<SimpleField name="end" type="string"></SimpleField>
+	<SimpleField name="altitudeMode" type="string"></SimpleField>
+	<SimpleField name="tessellate" type="int"></SimpleField>
+	<SimpleField name="extrude" type="int"></SimpleField>
+	<SimpleField name="visibility" type="int"></SimpleField>
+	<SimpleField name="drawOrder" type="int"></SimpleField>
+	<SimpleField name="icon" type="string"></SimpleField>
+</Schema>
+<Folder><name>potato</name>
+  <Placemark>
+	<name>Eitelsried_Potato</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#potato">
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="extrude">0</SimpleData>
+		<SimpleData name="visibility">-1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>11.1727823645716,48.184445194127,0 11.1735042188309,48.1844512716391,0 11.1741961339629,48.1843414128573,0 11.1806877588205,48.1858649336754,0 11.1807449432072,48.1873523807646,0 11.1785690644141,48.1873161603071,0 11.1761047509635,48.1870573091375,0 11.1764160451826,48.1861664924535,0 11.1756860675853,48.1859301461848,0 11.174472665298,48.1855831057456,0 11.1735665799402,48.1852852858763,0 11.1729486711811,48.185022538622,0 11.1728108382699,48.1848491321794,0 11.1727823645716,48.184445194127,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>
