@@ -1,15 +1,29 @@
-# config/config.yml
-
 input:
   aoi_path: "../kml/Eitelsried_Fields_kml"
-  start_date: "2025-04-20"
-  end_date: "2025-05-10"
-  cloud_threshold: 20
+  aoi_path_total: "../kml/Eitelsried_Fields_total.kml"
+  start_date: "2025-04-01"
+  end_date: "2025-05-01"
+
 
 output:
   base_dir: "../data"
+  s1_csv_pattern: "IDs_S1_{satellite}_{mode}_{level}_{polarisation}_{start}_{end}_orbit{rel_orbit}.csv"
+
 
 sentinel2:
   surface_reflectance: "COPERNICUS/S2_SR_HARMONIZED"
   cloud_probability: "COPERNICUS/S2_CLOUD_PROBABILITY"
+  cloud_threshold: 20
 
+sentinel1:
+  satellite: "BOTH"             # Options: "S1A", "S1B", "BOTH"
+  mode: "IW"
+  level: "SLC"
+  polarisation: "VV+VH"         # Options: "VV", "HH", "VV+VH", "HH+HV"
+  #rel_orbit: 14
+
+  odata:
+    base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
+    collection: "SENTINEL-1"
+    orderby: "ContentDate/Start"
+    top: 1000

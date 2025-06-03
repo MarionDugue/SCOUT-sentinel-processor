@@ -30,8 +30,8 @@ def main():
     base_out_dir = make_absolute(cfg["output"]["base_dir"], config_dir)
     start_date = cfg["input"]["start_date"]
     end_date = cfg["input"]["end_date"]
-    cloud = cfg["input"]["cloud_threshold"]
-
+    
+    cloud = cfg["sentinel2"]["cloud_threshold"]
     s2_sr_collection = cfg["sentinel2"]["surface_reflectance"]
     s2_cp_collection = cfg["sentinel2"]["cloud_probability"]
 

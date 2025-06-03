@@ -1,0 +1,18 @@
+2025-06-03 12:10:05,479 [INFO] Logger initialized
+2025-06-03 12:10:06,121 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/id_s1_both_iw_slc_vvvh_20250401_20250501_eitelsried.csv
+2025-06-03 12:11:55,173 [INFO] Logger initialized
+2025-06-03 12:11:55,952 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/id_s1_both_iw_slc_vvvh_20250401_20250501_eitelsried.csv
+2025-06-03 12:12:38,130 [INFO] Logger initialized
+2025-06-03 12:12:38,854 [WARNING] No matching Sentinel-1 scenes found.
+2025-06-03 12:14:13,531 [INFO] Logger initialized
+2025-06-03 12:14:15,018 [WARNING] No matching Sentinel-1 scenes found.
+2025-06-03 12:14:25,241 [INFO] Logger initialized
+2025-06-03 12:14:25,893 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/id_s1_both_iw_slc_vvvh_20250401_20250501_eitelsried.csv
+2025-06-03 12:15:02,207 [INFO] Logger initialized
+2025-06-03 12:15:02,996 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/id_s1_both_iw_slc_vvvh_20250401_20250501_orbitall.csv
+2025-06-03 12:16:03,742 [INFO] Logger initialized
+2025-06-03 12:16:04,958 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/id_s1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitall.csv
+2025-06-03 12:16:40,835 [INFO] Logger initialized
+2025-06-03 12:16:41,637 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitall.csv
+2025-06-03 12:17:10,508 [INFO] Logger initialized
+2025-06-03 12:17:11,731 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
