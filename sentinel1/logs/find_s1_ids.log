@@ -20,3 +20,5 @@
 2025-06-03 13:41:08,780 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
 2025-06-03 13:41:54,270 [INFO] Logger initialized
 2025-06-03 13:41:55,219 [INFO] Saved 13 scene IDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
+2025-06-03 14:15:16,323 [INFO] Logger initialized
+2025-06-03 14:15:17,151 [INFO] Saved 13 scene UUIDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
