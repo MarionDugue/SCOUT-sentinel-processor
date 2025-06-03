@@ -9,7 +9,6 @@ output:
   base_dir: "../data"
   s1_csv_pattern: "IDs_S1_{satellite}_{mode}_{level}_{polarisation}_{start}_{end}_orbit{rel_orbit}.csv"
 
-
 sentinel2:
   surface_reflectance: "COPERNICUS/S2_SR_HARMONIZED"
   cloud_probability: "COPERNICUS/S2_CLOUD_PROBABILITY"
@@ -22,8 +21,19 @@ sentinel1:
   polarisation: "VV+VH"         # Options: "VV", "HH", "VV+VH", "HH+HV"
   #rel_orbit: 14
 
+  download_url: "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value"
+  download_dir: "home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code"
+
   odata:
     base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
     collection: "SENTINEL-1"
     orderby: "ContentDate/Start"
     top: 1000
+
+copernicus_credentials:
+  username: mdugue@student.ethz.ch
+  password: ravpex-gUpwod-9fywma
+
+
+
+  
