@@ -6,8 +6,8 @@ workflow:
 
   
 input:
-  aoi_path: "../kml/Eitelsried_Fields_kml"
-  aoi_path_total: "../kml/Eitelsried_Fields_total.kml"
+  aoi_path: "../kml/Eitelsried_Fields_kml" #Directory of all indidivual fields
+  aoi_path_total: "../kml/Eitelsried_Fields_total.kml" #KML file of the union of all fields
   start_date: "2025-04-01"
   end_date: "2025-05-01"
 

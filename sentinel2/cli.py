@@ -6,13 +6,18 @@ import sys
 import yaml
 import ndvi_exporter
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config file")
     return parser.parse_args()
 
+
 def make_absolute(path, base_dir):
-    return path if os.path.isabs(path) else os.path.abspath(os.path.join(base_dir, path))
+    return (
+        path if os.path.isabs(path) else os.path.abspath(os.path.join(base_dir, path))
+    )
+
 
 def main():
     logging.basicConfig(filename="ndvi_export.log", level=logging.INFO)
@@ -30,11 +35,10 @@ def main():
     base_out_dir = make_absolute(cfg["output"]["base_dir"], config_dir)
     start_date = cfg["input"]["start_date"]
     end_date = cfg["input"]["end_date"]
-    
+
     cloud = cfg["sentinel2"]["cloud_threshold"]
     s2_sr_collection = cfg["sentinel2"]["surface_reflectance"]
     s2_cp_collection = cfg["sentinel2"]["cloud_probability"]
-
 
     # Check if aoi_path is a directory or a file
     if os.path.isdir(aoi_path):
@@ -59,7 +63,7 @@ def main():
                 cloud_threshold=cloud,
                 output_dir=out_dir,
                 s2_sr_collection=s2_sr_collection,
-                s2_cp_collection=s2_cp_collection
+                s2_cp_collection=s2_cp_collection,
             )
 
         logging.info("NDVI export completed successfully for all AOIs.")
@@ -67,6 +71,7 @@ def main():
         logging.error(f"Error during NDVI export: {err}", exc_info=True)
         print("An error occurred. Check ndvi_export.log for details.", file=sys.stderr)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
