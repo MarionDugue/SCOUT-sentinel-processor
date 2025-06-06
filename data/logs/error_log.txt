@@ -1,4 +1,6 @@
-2025-06-06 12:58:52,931 [INFO] Logger initialized
-2025-06-06 12:58:54,080 [INFO] Saved 13 scene UUIDs to /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
-2025-06-06 12:58:54,704 [INFO] Starting download for product eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-  0%|          | 0.00/1.00M [00:00<?, ?KiB/s]  0%|          | 52.0/1.00M [00:00<34:52, 478KiB/s]  0%|          | 896/1.00M [00:00<03:26, 4.86kKiB/s]  0%|          | 2.35k/1.00M [00:00<01:51, 8.98kKiB/s]  0%|          | 3.25k/1.00M [00:00<02:58, 5.60kKiB/s]  0%|          | 3.94k/1.00M [00:01<05:20, 3.11kKiB/s]  0%|          | 4.44k/1.00M [00:01<05:40, 2.93kKiB/s]  0%|          | 4.85k/1.00M [00:01<07:05, 2.34kKiB/s]  1%|          | 5.17k/1.00M [00:01<07:10, 2.31kKiB/s]  1%|          | 5.46k/1.00M [00:01<06:56, 2.39kKiB/s]  1%|          | 5.74k/1.00M [00:01<07:19, 2.27kKiB/s]
+ERROR:root:Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+[ERROR] 2025-06-06 14:47:43 Pre-processing failed for product: f15aac78-bb7a-4028-917b-d0eaba58e9b9
+[ERROR] 2025-06-06 14:47:43 Pre-processing failed for product: f15aac78-bb7a-4028-917b-d0eaba58e9b9
+ERROR:root:Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
+[ERROR] 2025-06-06 14:47:49 Pre-processing failed for product: 903106c3-2492-4902-82e7-bcabe271a99c
+[ERROR] 2025-06-06 14:47:49 Pre-processing failed for product: 903106c3-2492-4902-82e7-bcabe271a99c

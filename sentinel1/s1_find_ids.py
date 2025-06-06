@@ -174,7 +174,8 @@ def main():
     df['Name'] = df['Name'].str.replace('.SAFE', '', regex=False)
 
     # Save the 'Id' column (the UUIDs) instead of 'Name'
-    df[['Id']].to_csv(output_csv_path, index=False)
+    df[['Id', 'Name']].to_csv(output_csv_path, index=False)
+
 
     logging.info("Saved %d scene UUIDs to %s", len(df), output_csv_path)
 

@@ -1,7 +1,8 @@
 workflow:
-  find_ids: 1      # 1 to enable finding S1 scene IDs, 0 to disable
-  download: 1      # 1 to enable downloading S1 scenes, 0 to disable
-  skip_existing: 1 # 1 to skip downloading if scene exists, 0 to download all
+  find_ids: 0 # 1 to enable finding S1 scene IDs, 0 to disable  
+  download: 0 # 1 to enable downloading S1 scenes, 0 to disable
+  skip_existing: 0 # 1 to skip downloading if scene exists, 0 to download all
+  pre_process: 1 # 1 to enable pre-processing S1 scenes, 0 to disable
 
   
 input:
