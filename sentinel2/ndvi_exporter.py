@@ -12,7 +12,7 @@ import zipfile
 
 import ee
 import geopandas as gpd
-from shapely.geometry import Polygon, MultiPolygon
+from shapely.geometry import Polygon
 
 
 import logging

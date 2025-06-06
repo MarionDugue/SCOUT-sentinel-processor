@@ -5,10 +5,8 @@ import sys
 import os
 import yaml
 import logging
-from pathlib import Path
 import geopandas as gpd
 import stsa
-from datetime import datetime
 
 
 def setup_logging(log_file=None):
@@ -62,10 +60,12 @@ def load_config(config_file):
             config = yaml.safe_load(f)
 
         # Validate required sections
-        required_sections = ["input", "sentinel1", "pre-processing"]
+        required_sections = ['input', 'sentinel1', 'pre-processing']
         for section in required_sections:
             if section not in config:
-                raise ValueError(f"Missing required section '{section}' in config file")
+                raise ValueError(
+                    f"Missing required section '{section}' in config file"
+                )
 
         return config
     except Exception as e:
