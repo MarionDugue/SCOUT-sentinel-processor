@@ -4,7 +4,6 @@ input:
   start_date: "2025-04-01"
   end_date: "2025-05-01"
 
-
 output:
   base_dir: "../data"
   s1_csv_pattern: "IDs_S1_{satellite}_{mode}_{level}_{polarisation}_{start}_{end}_orbit{rel_orbit}.csv"
@@ -22,7 +21,7 @@ sentinel1:
   #rel_orbit: 14
 
   download_url: "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value"
-  download_dir: "home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code"
+  download_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code" #for SLCs scenes, the download directory can be on a separate path/server
 
   odata:
     base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
@@ -34,6 +33,17 @@ copernicus_credentials:
   username: mdugue@student.ethz.ch
   password: ravpex-gUpwod-9fywma
 
+pre-processing:
+  snap_graph: 
+
+scripts:
+  download_script: "sentinel1/s1_download_from_csv.py"
+  base_dir: ".."  # Base directory relative to config file
+
+logging:
+  log_dir: "data/logs"
+  error_log: "error_log.txt"
+  process_log: "process_log.txt"
 
 
   

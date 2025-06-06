@@ -1,4 +1,2 @@
-[INFO] 2025-06-03 14:39:45 Starting download for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-[INFO] 2025-06-03 14:56:45 Download successful for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-[INFO] 2025-06-03 14:56:46 Starting download for product: af08154e-86dd-4b40-b3e0-b18189bd246b
-[ERROR] 2025-06-03 14:59:50 Download failed for product: af08154e-86dd-4b40-b3e0-b18189bd246b
+[INFO] 2025-06-06 12:40:15 Starting download for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[ERROR] 2025-06-06 12:40:35 Download failed for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
