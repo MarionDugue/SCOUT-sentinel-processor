@@ -12,9 +12,16 @@ from datetime import datetime
 
 def setup_logging(log_file=None):
     """Set up logging configuration"""
-    log_format = '%(asctime)s - %(levelname)s - %(message)s'
+    log_format = '%(asctime)s [%(levelname)s] [PREPROCESS] %(message)s'
     
-    # Create log directory if it doesn't exist
+    # Always log to stdout/stderr to be captured by the bash script
+    logging.basicConfig(
+        level=logging.INFO,
+        format=log_format,
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
+    
+    # If log_file is provided, also log to file
     if log_file:
         # Get the script's directory
         script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -25,25 +32,19 @@ def setup_logging(log_file=None):
         
         if os.path.exists(logs_dir):
             log_dir = logs_dir
-            logging.info(f"Using existing logs directory: {log_dir}")
         else:
             # Create log directory if neither exists
             if not os.path.exists(log_dir):
                 os.makedirs(log_dir)
-                logging.info(f"Created new log directory: {log_dir}")
-            
+        
         # Setup main log file in log directory
         log_filename = os.path.basename(log_file) if log_file else 'preprocess.log'
         main_log_path = os.path.join(log_dir, log_filename)
         
-        logging.basicConfig(
-            level=logging.INFO,
-            format=log_format,
-            handlers=[
-                logging.FileHandler(main_log_path),
-                logging.StreamHandler(sys.stdout)
-            ]
-        )
+        # Add file handler for main log
+        file_handler = logging.FileHandler(main_log_path)
+        file_handler.setFormatter(logging.Formatter(log_format))
+        logging.getLogger().addHandler(file_handler)
         
         # Setup error scenes log file in log directory
         error_log_file = os.path.join(log_dir, 'error_scenes.log')
@@ -51,14 +52,6 @@ def setup_logging(log_file=None):
         error_handler.setLevel(logging.ERROR)
         error_handler.setFormatter(logging.Formatter(log_format))
         logging.getLogger().addHandler(error_handler)
-        
-        logging.info(f"Log files will be saved in: {log_dir}")
-    else:
-        logging.basicConfig(
-            level=logging.INFO,
-            format=log_format,
-            handlers=[logging.StreamHandler(sys.stdout)]
-        )
 
 def load_config(config_file):
     """Load and validate configuration from YAML file"""
@@ -115,10 +108,6 @@ def analyze_intersections(zip_path, aoi_path, polarization, log_file=None):
                 logging.error(error_msg)
                 return None
                 
-            logging.info(f"AOI loaded successfully:")
-            logging.info(f"  Number of features: {len(aoi)}")
-            logging.info(f"  CRS: {aoi.crs}")
-            logging.info(f"  Geometry types: {aoi.geometry.type.unique()}")
             
             # Ensure AOI is in the correct CRS (WGS84)
             if aoi.crs is None:
@@ -137,11 +126,10 @@ def analyze_intersections(zip_path, aoi_path, polarization, log_file=None):
         except Exception as e:
             error_msg = f"Scene {scene_name}: Error loading AOI - {str(e)}"
             logging.error(error_msg)
-            logging.error(f"Please ensure the AOI file exists and is a valid GeoJSON/KML file")
+            logging.error("Please ensure the AOI file exists and is a valid GeoJSON/KML file")
             return None
 
         # Find intersections
-        logging.info("Finding intersecting bursts...")
         try:
             intersections = s1.intersecting_bursts(aoi)
             if intersections is None or len(intersections) == 0:
@@ -164,8 +152,6 @@ def analyze_intersections(zip_path, aoi_path, polarization, log_file=None):
     except Exception as e:
         error_msg = f"Scene {scene_name}: Error in analyze_intersections - {str(e)}"
         logging.error(error_msg)
-        if log_file:
-            logging.error(f"Full error details written to: {log_file}")
         return None
 
 def main():
@@ -190,12 +176,10 @@ def main():
         logging.error(str(e))
         sys.exit(1)
 
-    # Use VH as the default polarization
+    # Use VH as the default polarization for the TopsSplitAnalyzer, which one doesn't really matter as long as its part of the scene
     polarization = "VH"
-    logging.info(f"Using polarization: {polarization}")
 
     # Analyze intersections
-    logging.info("Starting burst/swath intersection analysis")
     intersections = analyze_intersections(args.zip, aoi_path, polarization, args.log)
 
     if intersections:

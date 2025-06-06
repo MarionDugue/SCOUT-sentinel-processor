@@ -1,0 +1,50 @@
+2025-06-06 14:56:45,873 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286.SAFE.zip
+2025-06-06 14:56:45,933 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:45,979 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:45,979 [INFO] [PREPROCESS]   IW: IW1, Burst: 9
+2025-06-06 14:56:46,974 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05.SAFE.zip
+2025-06-06 14:56:47,017 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:47,052 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:47,052 [INFO] [PREPROCESS]   IW: IW1, Burst: 1
+2025-06-06 14:56:48,061 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA.SAFE.zip
+2025-06-06 14:56:48,120 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:48,164 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:48,164 [INFO] [PREPROCESS]   IW: IW2, Burst: 6
+2025-06-06 14:56:49,173 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip
+2025-06-06 14:56:49,240 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:49,287 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-06 14:56:50,333 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231.SAFE.zip
+2025-06-06 14:56:50,391 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:50,438 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:50,438 [INFO] [PREPROCESS]   IW: IW2, Burst: 1
+2025-06-06 14:56:51,463 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE.SAFE.zip
+2025-06-06 14:56:51,533 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:51,579 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:51,579 [INFO] [PREPROCESS]   IW: IW1, Burst: 9
+2025-06-06 14:56:52,607 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB.SAFE.zip
+2025-06-06 14:56:52,666 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:52,713 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:52,713 [INFO] [PREPROCESS]   IW: IW1, Burst: 1
+2025-06-06 14:56:53,548 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C.SAFE.zip
+2025-06-06 14:56:53,592 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:53,626 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:53,626 [INFO] [PREPROCESS]   IW: IW2, Burst: 6
+2025-06-06 14:56:54,647 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip
+2025-06-06 14:56:54,705 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:54,752 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-06 14:56:55,550 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF.SAFE.zip
+2025-06-06 14:56:55,591 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:55,626 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:55,626 [INFO] [PREPROCESS]   IW: IW2, Burst: 1
+2025-06-06 14:56:56,388 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4.SAFE.zip
+2025-06-06 14:56:56,430 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:56,464 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:56,464 [INFO] [PREPROCESS]   IW: IW1, Burst: 9
+2025-06-06 14:56:57,472 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7.SAFE.zip
+2025-06-06 14:56:57,536 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:57,582 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:57,582 [INFO] [PREPROCESS]   IW: IW1, Burst: 1
+2025-06-06 14:56:58,383 [INFO] [PREPROCESS] Loading S1 scene with polarization VH: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369.SAFE.zip
+2025-06-06 14:56:58,420 [INFO] [PREPROCESS] Loading AOI: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/../kml/Eitelsried_Fields_total.kml
+2025-06-06 14:56:58,454 [INFO] [PREPROCESS] Found 1 intersecting bursts:
+2025-06-06 14:56:58,454 [INFO] [PREPROCESS]   IW: IW2, Burst: 6

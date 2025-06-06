@@ -12,7 +12,7 @@ from typing import Optional
 def setup_logger(log_level=logging.INFO) -> None:
     logging.basicConfig(
         level=log_level,
-        format="%(asctime)s [%(levelname)s] %(message)s"
+        format="%(asctime)s [%(levelname)s] [DOWNLOAD] %(message)s"
     )
 
 def load_config(config_path: str) -> dict:
@@ -36,11 +36,11 @@ def download_scene(product_id: str, access_token: str, base_file_path: str, base
     url = base_url.format(product_id)
     headers = {"Authorization": f"Bearer {access_token}"}
 
-    logging.info(f"Starting download for product {product_id}")
+    logging.info(f"[DOWNLOAD] Starting download for product {product_id}")
     response = requests.get(url, headers=headers, stream=True)
     if response.status_code != 200:
-        logging.error(f"Failed to download product {product_id}. Status code: {response.status_code}")
-        logging.error(f"Response content: {response.content}")
+        logging.error(f"[DOWNLOAD] Failed to download product {product_id}. Status code: {response.status_code}")
+        logging.error(f"[DOWNLOAD] Response content: {response.content}")
         return None
 
     total_size = int(response.headers.get("content-length", 0))
@@ -52,7 +52,7 @@ def download_scene(product_id: str, access_token: str, base_file_path: str, base
                           total=total_size // block_size, unit="KiB", unit_scale=True):
             if chunk:
                 tmp_file.write(chunk)
-    logging.info("Download complete. Processing archive...")
+    logging.info("[DOWNLOAD] Download complete. Processing archive...")
 
     try:
         with zipfile.ZipFile(temp_file_path, "r") as zip_ref:
@@ -67,9 +67,9 @@ def download_scene(product_id: str, access_token: str, base_file_path: str, base
                     break
             if not safe_folder:
                 safe_folder = product_id
-                logging.warning("No .SAFE folder found in archive, using product id as folder name")
+                logging.warning("[DOWNLOAD] No .SAFE folder found in archive, using product id as folder name")
             else:
-                logging.info(f".SAFE folder detected: {safe_folder}")
+                logging.info(f"[DOWNLOAD] .SAFE folder detected: {safe_folder}")
 
             new_zip_path = os.path.join(base_file_path, f"{safe_folder}.zip")
             with zipfile.ZipFile(new_zip_path, "w", compression=zipfile.ZIP_DEFLATED) as new_zip:
@@ -83,7 +83,7 @@ def download_scene(product_id: str, access_token: str, base_file_path: str, base
                         else:
                             file_data = zip_ref.read(info)
                             new_zip.writestr(new_name, file_data)
-            logging.info(f"Saved filtered zip to {new_zip_path}")
+            logging.info(f"[DOWNLOAD] Saved filtered zip to {new_zip_path}")
     finally:
         os.remove(temp_file_path)
 
@@ -113,20 +113,20 @@ def main():
     password = creds.get("password")
 
     if not username or not password:
-        logging.error("Username or password missing in config under 'copernicus_credentials'")
+        logging.error("[DOWNLOAD] Username or password missing in config under 'copernicus_credentials'")
         return
 
     try:
         access_token = get_access_token(username, password)
     except Exception as e:
-        logging.error(f"Failed to get access token: {e}")
+        logging.error(f"[DOWNLOAD] Failed to get access token: {e}")
         return
 
     downloaded_path = download_scene(args.product_id, access_token, base_file_path, base_url)
     if downloaded_path:
-        logging.info(f"Download finished successfully: {downloaded_path}")
+        logging.info(f"[DOWNLOAD] Download finished successfully: {downloaded_path}")
     else:
-        logging.error("Download failed.")
+        logging.error("[DOWNLOAD] Download failed.")
 
 if __name__ == "__main__":
     main()
