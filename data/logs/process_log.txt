@@ -1,2 +1,30 @@
-[INFO] 2025-06-06 12:40:15 Starting download for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-[ERROR] 2025-06-06 12:40:35 Download failed for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[INFO] 2025-06-06 12:58:51 Starting S1 workflow with config: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
+[INFO] 2025-06-06 12:58:51 Workflow configuration:
+[INFO] 2025-06-06 12:58:51   find_ids: 1
+[INFO] 2025-06-06 12:58:51   download: 1
+[INFO] 2025-06-06 12:58:51   skip_existing: 1
+[INFO] 2025-06-06 12:58:51 File paths:
+[INFO] 2025-06-06 12:58:51   Config file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
+[INFO] 2025-06-06 12:58:51   Find IDs script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_find_ids.py
+[INFO] 2025-06-06 12:58:51   Download script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_download_from_csv.py
+[INFO] 2025-06-06 12:58:51   Log directory: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs
+[INFO] 2025-06-06 12:58:51   Error log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/error_log.txt
+[INFO] 2025-06-06 12:58:51   Process log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/process_log.txt
+[INFO] 2025-06-06 12:58:52 CSV configuration:
+[INFO] 2025-06-06 12:58:52   Pattern: IDs_S1_{satellite}_{mode}_{level}_{polarisation}_{start}_{end}_orbit{rel_orbit}.csv
+[INFO] 2025-06-06 12:58:52   Satellite: BOTH
+[INFO] 2025-06-06 12:58:52   Mode: IW
+[INFO] 2025-06-06 12:58:52   Level: SLC
+[INFO] 2025-06-06 12:58:52   Polarisation: VVVH
+[INFO] 2025-06-06 12:58:52   Start date: 20250401
+[INFO] 2025-06-06 12:58:52   End date: 20250501
+[INFO] 2025-06-06 12:58:52   Relative orbit: ALL
+[INFO] 2025-06-06 12:58:52 Starting find_ids step...
+[INFO] 2025-06-06 12:58:52 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_find_ids.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --log find_s1_ids.log
+[INFO] 2025-06-06 12:58:54 Find IDs step completed successfully
+[INFO] 2025-06-06 12:58:54 Found 13 scene IDs in /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250501_orbitALL.csv
+[INFO] 2025-06-06 12:58:54 Starting download step...
+[INFO] 2025-06-06 12:58:54 Processing product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[INFO] 2025-06-06 12:58:54   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
+[INFO] 2025-06-06 12:58:54 Starting download for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[INFO] 2025-06-06 12:58:54 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_download_from_csv.py --product_id eef874bc-2a0e-44ea-9a0b-cc90ae54bde3 --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml

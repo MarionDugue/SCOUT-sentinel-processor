@@ -51,10 +51,10 @@ def extract_wkt_from_kml(kml_path: str, layer: str = None) -> str:
 
 
 def get_s1_data(wkt: str, config: dict) -> pd.DataFrame:
-
     s1 = config['sentinel1']
     input_dates = config['input']
-    base_url = s1.get('odata', {}).get('base_url', "https://catalogue.dataspace.copernicus.eu/odata/v1/Products")
+    odata_cfg = s1.get('odata', {})
+    base_url = odata_cfg.get('base_url')
 
     contains = (
         f"(contains(Name, 'S1A_{s1['mode']}_{s1['level']}') or contains(Name, 'S1B_{s1['mode']}_{s1['level']}'))"
@@ -63,7 +63,7 @@ def get_s1_data(wkt: str, config: dict) -> pd.DataFrame:
     )
 
     filter_params = [
-        f"Collection/Name eq '{s1.get('odata', {}).get('collection', 'SENTINEL-1')}'",
+        f"Collection/Name eq '{s1['collection']}'",
         contains,
         f"OData.CSC.Intersects(area=geography'SRID=4326;{wkt}')",
         f"ContentDate/Start gt {input_dates['start_date']}T00:00:00.000Z",
