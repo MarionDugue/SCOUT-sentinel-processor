@@ -1,15 +1,15 @@
 workflow:
-  find_ids: 0 # 1 to enable finding S1 scene IDs, 0 to disable  
-  download: 0 # 1 to enable downloading S1 scenes, 0 to disable
-  skip_existing: 0 # 1 to skip downloading if scene exists, 0 to download all
-  pre_process: 1 # 1 to enable pre-processing S1 scenes, 0 to disable
+  find_ids: 1 # 1 to enable finding S1 scene IDs, 0 to disable  
+  download: 1 # 1 to enable downloading S1 scenes, 0 to disable
+  skip_existing: 1 # 1 to skip downloading if scene exists, 0 to download all
+  pre_process: 1 # 1 to enable pre-processing S1 scenes ( SNAP ), 0 to disable
 
   
 input:
   aoi_path: "../kml/Eitelsried_Fields_kml" #Directory of all indidivual fields
   aoi_path_total: "../kml/Eitelsried_Fields_total.kml" #KML file of the union of all fields
   start_date: "2025-04-01"
-  end_date: "2025-05-01"
+  end_date: "2025-05-31"
 
 output:
   base_dir: "../data"
@@ -18,7 +18,7 @@ output:
 sentinel2:
   surface_reflectance: "COPERNICUS/S2_SR_HARMONIZED"
   cloud_probability: "COPERNICUS/S2_CLOUD_PROBABILITY"
-  cloud_threshold: 20
+  cloud_threshold: 15
 
 sentinel1:
   satellite: "BOTH"             # Options: "S1A", "S1B", "BOTH"
@@ -28,8 +28,24 @@ sentinel1:
   collection: "SENTINEL-1"      # Collection name for S1 data
   #rel_orbit: 14                # Optional: Filter by relative orbit number
 
+  # SNAP processing configuration
+  snap:
+    gpt_path: "/home/mdugue/esa-snap/bin/gpt"  # Path to SNAP's gpt executable
+    dem_path: "/home/mdugue/cds/working/Marion/AGRI4SAR/DEM/srtm_germany_dtm.tif"  # Path to DEM suitable for AOI
+    graphs:
+      #- name: "split_orb_complexCal_deb_writeBEAM"
+      #  path: "sentinel1/snap_graphs/split_orb_complexCal_deb_writeBEAM.xml"
+      #  output_suffix: "_split_Orb.dim"
+      #- name: "readBEAM_spkl_decomp_TC_WriteTIFF"
+      #  path: "sentinel1/snap_graphs/readBEAM_spkl_decomp_TC_WriteTIFF.xml"
+      #  output_suffix: "_final.dim"
+      - name: "split_Orb_Cal_deb_ML_dB_TC_10m_IA"
+        path: "sentinel1/snap_graphs/split_Orb_Cal_deb_ML_dB_TC_10m_IA.xml"
+        output_suffix: "_finaldB.dim"
+    output_dir: "../data/processed"  # Directory for processed outputs
+
   download_url: "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value"
-  download_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code" #for SLCs scenes, the download directory can be on a separate path/server
+  download_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs" #for SLCs scenes, the download directory can be on a separate path/server
 
   odata:
     base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"

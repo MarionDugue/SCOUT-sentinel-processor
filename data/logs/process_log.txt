@@ -1,148 +1,31 @@
-[INFO] 2025-06-06 14:56:44 Starting S1 workflow with config: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
-[INFO] 2025-06-06 14:56:44 Workflow configuration:
-[INFO] 2025-06-06 14:56:44   find_ids: 0
-[INFO] 2025-06-06 14:56:44   download: 0
-[INFO] 2025-06-06 14:56:44   skip_existing: 0
-[INFO] 2025-06-06 14:56:44   pre_process: 1
-[INFO] 2025-06-06 14:56:44 File paths:
-[INFO] 2025-06-06 14:56:44   Config file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
-[INFO] 2025-06-06 14:56:44   Find IDs script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_find_ids.py
-[INFO] 2025-06-06 14:56:44   Download script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_download_from_csv.py
-[INFO] 2025-06-06 14:56:44   Log directory: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs
-[INFO] 2025-06-06 14:56:44   Error log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/error_log.txt
-[INFO] 2025-06-06 14:56:44   Process log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/process_log.txt
-[INFO] 2025-06-06 14:56:44 CSV configuration:
-[INFO] 2025-06-06 14:56:44   Satellite: BOTH
-[INFO] 2025-06-06 14:56:44   Mode: IW
-[INFO] 2025-06-06 14:56:44   Level: SLC
-[INFO] 2025-06-06 14:56:44   Polarisation: VVVH
-[INFO] 2025-06-06 14:56:44   Start date: 20250401
-[INFO] 2025-06-06 14:56:44   End date: 20250501
-[INFO] 2025-06-06 14:56:44   Relative orbit: ALL
-[INFO] 2025-06-06 14:56:44 Find IDs step is disabled by toggle
-[INFO] 2025-06-06 14:56:44 Starting processing step...
-[INFO] 2025-06-06 14:56:44 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:45 Starting pre-processing for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-[INFO] 2025-06-06 14:56:45 Debug information:
-[INFO] 2025-06-06 14:56:45   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:45   Scene name: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286
-[INFO] 2025-06-06 14:56:45   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286.SAFE.zip
-[INFO] 2025-06-06 14:56:45 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:45 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:46 Pre-processing completed successfully for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
-[INFO] 2025-06-06 14:56:46 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:46 Starting pre-processing for product: af08154e-86dd-4b40-b3e0-b18189bd246b
-[INFO] 2025-06-06 14:56:46 Debug information:
-[INFO] 2025-06-06 14:56:46   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:46   Scene name: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05
-[INFO] 2025-06-06 14:56:46   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05.SAFE.zip
-[INFO] 2025-06-06 14:56:46 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:46 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:47 Pre-processing completed successfully for product: af08154e-86dd-4b40-b3e0-b18189bd246b
-[INFO] 2025-06-06 14:56:47 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:47 Starting pre-processing for product: 6549d4ec-9a2a-42ec-97f6-f8d7c76c9bf9
-[INFO] 2025-06-06 14:56:47 Debug information:
-[INFO] 2025-06-06 14:56:47   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:47   Scene name: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA
-[INFO] 2025-06-06 14:56:47   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA.SAFE.zip
-[INFO] 2025-06-06 14:56:47 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:47 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:48 Pre-processing completed successfully for product: 6549d4ec-9a2a-42ec-97f6-f8d7c76c9bf9
-[INFO] 2025-06-06 14:56:48 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:48 Starting pre-processing for product: f15aac78-bb7a-4028-917b-d0eaba58e9b9
-[INFO] 2025-06-06 14:56:48 Debug information:
-[INFO] 2025-06-06 14:56:48   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:48   Scene name: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558
-[INFO] 2025-06-06 14:56:48   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip
-[INFO] 2025-06-06 14:56:48 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:48 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip --log preprocess.log
-[ERROR] 2025-06-06 14:56:49 Pre-processing failed for product: f15aac78-bb7a-4028-917b-d0eaba58e9b9
-[ERROR] 2025-06-06 14:56:49 Pre-processing failed for product: f15aac78-bb7a-4028-917b-d0eaba58e9b9
-[INFO] 2025-06-06 14:56:49 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:49 Starting pre-processing for product: efca4aa9-2b5b-43dd-b45a-879e5a79f8ca
-[INFO] 2025-06-06 14:56:49 Debug information:
-[INFO] 2025-06-06 14:56:49   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:49   Scene name: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231
-[INFO] 2025-06-06 14:56:49   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231.SAFE.zip
-[INFO] 2025-06-06 14:56:49 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:49 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:50 Pre-processing completed successfully for product: efca4aa9-2b5b-43dd-b45a-879e5a79f8ca
-[INFO] 2025-06-06 14:56:50 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:50 Starting pre-processing for product: a54a1f3a-c43b-47e7-aaba-1ff0b60d6603
-[INFO] 2025-06-06 14:56:50 Debug information:
-[INFO] 2025-06-06 14:56:50   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:50   Scene name: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE
-[INFO] 2025-06-06 14:56:50   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE.SAFE.zip
-[INFO] 2025-06-06 14:56:50 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:50 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:51 Pre-processing completed successfully for product: a54a1f3a-c43b-47e7-aaba-1ff0b60d6603
-[INFO] 2025-06-06 14:56:51 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:51 Starting pre-processing for product: e41edfec-1775-4ed3-a073-4a5580f2e5c7
-[INFO] 2025-06-06 14:56:51 Debug information:
-[INFO] 2025-06-06 14:56:51   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:51   Scene name: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB
-[INFO] 2025-06-06 14:56:51   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB.SAFE.zip
-[INFO] 2025-06-06 14:56:51 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:51 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:52 Pre-processing completed successfully for product: e41edfec-1775-4ed3-a073-4a5580f2e5c7
-[INFO] 2025-06-06 14:56:52 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:52 Starting pre-processing for product: 991640b3-5f90-4838-a2e7-6584331db8cc
-[INFO] 2025-06-06 14:56:52 Debug information:
-[INFO] 2025-06-06 14:56:52   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:52   Scene name: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C
-[INFO] 2025-06-06 14:56:52   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C.SAFE.zip
-[INFO] 2025-06-06 14:56:52 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:52 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:53 Pre-processing completed successfully for product: 991640b3-5f90-4838-a2e7-6584331db8cc
-[INFO] 2025-06-06 14:56:53 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:53 Starting pre-processing for product: 903106c3-2492-4902-82e7-bcabe271a99c
-[INFO] 2025-06-06 14:56:53 Debug information:
-[INFO] 2025-06-06 14:56:53   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:53   Scene name: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E
-[INFO] 2025-06-06 14:56:53   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip
-[INFO] 2025-06-06 14:56:53 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:53 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip --log preprocess.log
-[ERROR] 2025-06-06 14:56:54 Pre-processing failed for product: 903106c3-2492-4902-82e7-bcabe271a99c
-[ERROR] 2025-06-06 14:56:54 Pre-processing failed for product: 903106c3-2492-4902-82e7-bcabe271a99c
-[INFO] 2025-06-06 14:56:54 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:54 Starting pre-processing for product: f0756119-59e6-4d87-a37b-188173a3a512
-[INFO] 2025-06-06 14:56:54 Debug information:
-[INFO] 2025-06-06 14:56:54   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:54   Scene name: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF
-[INFO] 2025-06-06 14:56:54   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF.SAFE.zip
-[INFO] 2025-06-06 14:56:54 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:54 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:55 Pre-processing completed successfully for product: f0756119-59e6-4d87-a37b-188173a3a512
-[INFO] 2025-06-06 14:56:55 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:55 Starting pre-processing for product: 5d8d9728-c1d5-4f6f-9bdc-f20678b948c9
-[INFO] 2025-06-06 14:56:55 Debug information:
-[INFO] 2025-06-06 14:56:55   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:55   Scene name: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4
-[INFO] 2025-06-06 14:56:55   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4.SAFE.zip
-[INFO] 2025-06-06 14:56:55 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:55 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:56 Pre-processing completed successfully for product: 5d8d9728-c1d5-4f6f-9bdc-f20678b948c9
-[INFO] 2025-06-06 14:56:56 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:56 Starting pre-processing for product: 08b957ed-b3b2-4352-be1b-bbd92f9cad38
-[INFO] 2025-06-06 14:56:56 Debug information:
-[INFO] 2025-06-06 14:56:56   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:56   Scene name: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7
-[INFO] 2025-06-06 14:56:56   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7.SAFE.zip
-[INFO] 2025-06-06 14:56:56 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:56 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:57 Pre-processing completed successfully for product: 08b957ed-b3b2-4352-be1b-bbd92f9cad38
-[INFO] 2025-06-06 14:56:57 Download step is disabled by toggle
-[INFO] 2025-06-06 14:56:57 Starting pre-processing for product: 72046754-738e-4f67-8d9b-0be4a567c591
-[INFO] 2025-06-06 14:56:57 Debug information:
-[INFO] 2025-06-06 14:56:57   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code
-[INFO] 2025-06-06 14:56:57   Scene name: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369
-[INFO] 2025-06-06 14:56:57   Full zip path: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369.SAFE.zip
-[INFO] 2025-06-06 14:56:57 Found ZIP file, proceeding with intersection analysis...
-[INFO] 2025-06-06 14:56:57 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_finding_intersect_burst_swath.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --zip /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369.SAFE.zip --log preprocess.log
-[INFO] 2025-06-06 14:56:58 Pre-processing completed successfully for product: 72046754-738e-4f67-8d9b-0be4a567c591
-[INFO] 2025-06-06 14:56:58 Processing steps completed
-[INFO] 2025-06-06 14:56:58 Processing summary:
-[INFO] 2025-06-06 14:56:58   Total products in CSV: 13
-[INFO] 2025-06-06 14:56:58   Successfully pre-processed: 11
-[INFO] 2025-06-06 14:56:58   Failed pre-processing: 4
-[INFO] 2025-06-06 14:56:58 S1 workflow completed
+[INFO] 2025-06-11 15:30:28 Starting S1 workflow with config: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
+[INFO] 2025-06-11 15:30:28 Workflow configuration:
+[INFO] 2025-06-11 15:30:28   find_ids: 1
+[INFO] 2025-06-11 15:30:28   download: 1
+[INFO] 2025-06-11 15:30:28   skip_existing: 1
+[INFO] 2025-06-11 15:30:28   pre_process: 1 (includes SNAP processing)
+[INFO] 2025-06-11 15:30:28 File paths:
+[INFO] 2025-06-11 15:30:28   Config file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml
+[INFO] 2025-06-11 15:30:28   Find IDs script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_find_ids.py
+[INFO] 2025-06-11 15:30:28   Download script: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_download_from_csv.py
+[INFO] 2025-06-11 15:30:28   Log directory: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs
+[INFO] 2025-06-11 15:30:28   Error log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/error_log.txt
+[INFO] 2025-06-11 15:30:28   Process log: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/logs/process_log.txt
+[INFO] 2025-06-11 15:30:28 CSV configuration:
+[INFO] 2025-06-11 15:30:28   Satellite: BOTH
+[INFO] 2025-06-11 15:30:28   Mode: IW
+[INFO] 2025-06-11 15:30:28   Level: SLC
+[INFO] 2025-06-11 15:30:28   Polarisation: VVVH
+[INFO] 2025-06-11 15:30:28   Start date: 20250401
+[INFO] 2025-06-11 15:30:28   End date: 20250531
+[INFO] 2025-06-11 15:30:28   Relative orbit: ALL
+[INFO] 2025-06-11 15:30:28 Using DEM file: /home/mdugue/cds/working/Marion/AGRI4SAR/DEM/srtm_germany_dtm.tif
+[INFO] 2025-06-11 15:30:28 Starting find_ids step...
+[INFO] 2025-06-11 15:30:28 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_find_ids.py --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml --log find_s1_ids.log
+[INFO] 2025-06-11 15:30:30 Find IDs step completed successfully
+[INFO] 2025-06-11 15:30:30 Found 24 scene IDs in /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/data/IDs_S1_BOTH_IW_SLC_VVVH_20250401_20250531_orbitALL.csv
+[INFO] 2025-06-11 15:30:30 Starting processing step...
+[INFO] 2025-06-11 15:30:30 Processing product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[INFO] 2025-06-11 15:30:30   Download directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs
+[INFO] 2025-06-11 15:30:30 Starting download for product: eef874bc-2a0e-44ea-9a0b-cc90ae54bde3
+[INFO] 2025-06-11 15:30:30 Running command: python3 /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/s1_download_from_csv.py --product_id eef874bc-2a0e-44ea-9a0b-cc90ae54bde3 --config /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/sentinel1/../config/config.yml

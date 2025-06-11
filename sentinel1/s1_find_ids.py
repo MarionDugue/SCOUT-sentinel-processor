@@ -182,7 +182,7 @@ def main():
     df = get_s1_data(wkt=wkt, config=config)
 
     if df.empty:
-        logging.warning("[FIND_IDS] No matching Sentinel-1 scenes found.")
+        logging.warning(" No matching Sentinel-1 scenes found.")
         return
 
     # Remove '.SAFE' only from names, if you still need it elsewhere
@@ -191,7 +191,7 @@ def main():
     # Save the 'Id' column (the UUIDs) instead of 'Name'
     df[["Id", "Name"]].to_csv(output_csv_path, index=False)
 
-    logging.info("[FIND_IDS] Saved %d scene UUIDs to %s", len(df), output_csv_path)
+    logging.info(" Saved %d scene UUIDs to %s", len(df), output_csv_path)
 
 
 if __name__ == "__main__":
@@ -200,5 +200,5 @@ if __name__ == "__main__":
     log_path = os.path.join(log_dir, args.log)
     setup_logger(log_path)
 
-    logging.info("[FIND_IDS] Logger initialized")
+    logging.info("Logger initialized")
     main()
