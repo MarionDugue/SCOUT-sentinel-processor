@@ -1,0 +1,982 @@
+[INFO]  2025-06-12 17:43:19 Step: Starting subsetting process
+[INFO]  2025-06-12 17:43:19 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO]  2025-06-12 17:43:19 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:43:19 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:43:19 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO]  2025-06-12 17:43:19 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:43:19 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:43:19 Step: Source shape: (3766, 15128)
+[INFO]  2025-06-12 17:43:19 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:43:19 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:43:19 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:43:19 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:43:19 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:43:19 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:43:19 Step: Subset shape: (4, 97, 172)
+[INFO]  2025-06-12 17:43:19 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:43:19 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:43:19 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:43:19 Step: Subsetting process completed
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:38 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:38 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:38 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:38 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:38 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:38 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:38 Step: Source transform: | 0.00, 0.00, 11.15|
+| 0.00,-0.00, 48.36|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:38 Step: Source shape: (3838, 14734)
+[INFO]  2025-06-12 17:54:38 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:38 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:38 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:38 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:38 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:38 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:38 Step: Subset shape: (4, 96, 173)
+[INFO]  2025-06-12 17:54:38 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:38 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:38 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:38 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-12 17:54:38 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:39 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:39 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:39 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:39 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:39 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:39 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:39 Step: Source transform: | 0.00, 0.00, 11.10|
+| 0.00,-0.00, 48.53|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:39 Step: Source shape: (3840, 14803)
+[INFO]  2025-06-12 17:54:39 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:39 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:39 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:39 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:39 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:39 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:39 Step: Subset shape: (4, 92, 172)
+[INFO]  2025-06-12 17:54:39 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:39 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:39 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:39 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:39 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-12 17:54:40 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Detected processing type: _final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:40 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:41 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:41 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final.dim.tif
+[INFO]  2025-06-12 17:54:41 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:41 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:41 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final.dim.tif
+[INFO]  2025-06-12 17:54:41 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:41 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.26|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:41 Step: Source shape: (3744, 14966)
+[INFO]  2025-06-12 17:54:41 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:41 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:41 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:41 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:41 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:41 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:41 Step: Subset shape: (5, 97, 173)
+[INFO]  2025-06-12 17:54:41 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:41 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:41 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:41 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:41 Extracting statistics for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:42 Subsetting completed successfully for scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-12 17:54:42   Subset output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final_Eitelsried_Fields_total_subset.tif
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-12 17:54:42 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Detected processing type: _final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:42 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:43 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:43 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final.dim.tif
+[INFO]  2025-06-12 17:54:43 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:43 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:43 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final.dim.tif
+[INFO]  2025-06-12 17:54:43 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:43 Step: Source transform: | 0.00, 0.00, 10.29|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:43 Step: Source shape: (3769, 15135)
+[INFO]  2025-06-12 17:54:43 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:43 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:43 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:43 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:43 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:43 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:43 Step: Subset shape: (5, 97, 172)
+[INFO]  2025-06-12 17:54:43 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:43 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:43 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:43 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:43 Extracting statistics for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:44 Subsetting completed successfully for scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-12 17:54:44   Subset output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final_Eitelsried_Fields_total_subset.tif
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:44 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:45 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:45 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:45 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:45 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:45 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:45 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:45 Step: Source transform: | 0.00, 0.00, 11.15|
+| 0.00,-0.00, 48.36|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:45 Step: Source shape: (3837, 14733)
+[INFO]  2025-06-12 17:54:45 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:45 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:45 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:45 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:45 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:45 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:45 Step: Subset shape: (4, 96, 172)
+[INFO]  2025-06-12 17:54:45 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:45 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:45 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:45 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:45 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-12 17:54:45 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Detected processing type: _poldecomp_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:46 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:46 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim.tif
+[INFO]  2025-06-12 17:54:46 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:46 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:46 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim.tif
+[INFO]  2025-06-12 17:54:46 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:46 Step: Source transform: | 0.00, 0.00, 11.10|
+| 0.00,-0.00, 48.53|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:46 Step: Source shape: (3844, 14809)
+[INFO]  2025-06-12 17:54:46 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:46 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:46 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:46 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:46 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:46 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:46 Step: Subset shape: (5, 86, 173)
+[INFO]  2025-06-12 17:54:46 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:46 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:46 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:46 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:46 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-12 17:54:47 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Detected processing type: _final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:47 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:48 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:48 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final.dim.tif
+[INFO]  2025-06-12 17:54:48 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:48 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:48 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final.dim.tif
+[INFO]  2025-06-12 17:54:48 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:48 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.26|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:48 Step: Source shape: (3743, 14966)
+[INFO]  2025-06-12 17:54:48 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:48 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:48 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:48 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:48 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:48 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:48 Step: Subset shape: (5, 96, 172)
+[INFO]  2025-06-12 17:54:48 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:48 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:48 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:48 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:48 Extracting statistics for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:48 Subsetting completed successfully for scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-12 17:54:48   Subset output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final_Eitelsried_Fields_total_subset.tif
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-12 17:54:49 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Detected processing type: _poldecomp_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:49 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:50 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:50 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final.dim.tif
+[INFO]  2025-06-12 17:54:50 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:50 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:50 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final.dim.tif
+[INFO]  2025-06-12 17:54:50 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:50 Step: Source transform: | 0.00, 0.00, 10.29|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:50 Step: Source shape: (3769, 15135)
+[INFO]  2025-06-12 17:54:50 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:50 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:50 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:50 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:50 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:50 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:50 Step: Subset shape: (5, 96, 172)
+[INFO]  2025-06-12 17:54:50 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:50 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:50 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:50 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:50 Extracting statistics for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:51 Subsetting completed successfully for scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-12 17:54:51   Subset output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final_Eitelsried_Fields_total_subset.tif
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:51 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:51 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:51 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:51 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:51 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:51 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:52 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:52 Step: Source transform: | 0.00, 0.00, 11.15|
+| 0.00,-0.00, 48.36|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:52 Step: Source shape: (3836, 14732)
+[INFO]  2025-06-12 17:54:52 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:52 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:52 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:52 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:52 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:52 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:52 Step: Subset shape: (4, 97, 173)
+[INFO]  2025-06-12 17:54:52 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:52 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:52 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:52 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:52 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-12 17:54:52 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:52 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:52 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:52   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:53 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:53 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:53 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:53 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:53 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:53 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:53 Step: Source transform: | 0.00, 0.00, 11.10|
+| 0.00,-0.00, 48.53|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:53 Step: Source shape: (3839, 14801)
+[INFO]  2025-06-12 17:54:53 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:53 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:53 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:53 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:53 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:53 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:53 Step: Subset shape: (4, 85, 172)
+[INFO]  2025-06-12 17:54:53 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:53 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:53 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:53 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:53 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-12 17:54:54 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Detected processing type: _final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:54 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:55 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:55 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final.dim.tif
+[INFO]  2025-06-12 17:54:55 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:55 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:55 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final.dim.tif
+[INFO]  2025-06-12 17:54:55 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:55 Step: Source transform: | 0.00, 0.00, 10.27|
+| 0.00,-0.00, 48.29|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:55 Step: Source shape: (3743, 14963)
+[INFO]  2025-06-12 17:54:55 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:55 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:55 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:55 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:55 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:55 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:55 Step: Subset shape: (5, 97, 173)
+[INFO]  2025-06-12 17:54:55 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:55 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:55 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:55 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:55 Extracting statistics for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:55 Subsetting completed successfully for scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-12 17:54:55   Subset output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final_Eitelsried_Fields_total_subset.tif
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-12 17:54:56 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:56 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:57 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:57 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:57 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:57 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:57 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:57 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:57 Step: Source transform: | 0.00, 0.00, 10.29|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:57 Step: Source shape: (3767, 15128)
+[INFO]  2025-06-12 17:54:57 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:57 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:57 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:57 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:57 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:57 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:57 Step: Subset shape: (4, 96, 172)
+[INFO]  2025-06-12 17:54:57 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:57 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:57 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:57 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:57 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-12 17:54:57 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:58 Step: Starting subsetting process
+[INFO]  2025-06-12 17:54:58 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:58 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:58 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:58 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim.tif
+[INFO]  2025-06-12 17:54:58 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:58 Step: Source transform: | 0.00, 0.00, 11.15|
+| 0.00,-0.00, 48.36|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:58 Step: Source shape: (3836, 14732)
+[INFO]  2025-06-12 17:54:58 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:54:58 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:54:58 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:54:58 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:54:58 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:54:58 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:54:58 Step: Subset shape: (4, 96, 172)
+[INFO]  2025-06-12 17:54:58 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:54:58 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:58 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:54:58 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:58 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-12 17:54:59 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:54:59 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:00 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:00 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:00 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:00 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:00 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:00 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:00 Step: Source transform: | 0.00, 0.00, 11.10|
+| 0.00,-0.00, 48.53|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:00 Step: Source shape: (3839, 14801)
+[INFO]  2025-06-12 17:55:00 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:00 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:00 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:00 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:00 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:00 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:00 Step: Subset shape: (4, 87, 173)
+[INFO]  2025-06-12 17:55:00 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:00 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:00 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:00 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:55:00 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-12 17:55:00 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:01 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:01 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:01 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:01 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:01 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:01 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:01 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.26|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:01 Step: Source shape: (3741, 14958)
+[INFO]  2025-06-12 17:55:01 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:01 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:01 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:01 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:01 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:01 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:01 Step: Subset shape: (4, 97, 173)
+[INFO]  2025-06-12 17:55:01 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:01 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:01 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:01 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:01 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-12 17:55:02 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-12 17:55:02 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:03 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:03 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:03 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:03 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:03 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:03 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:03 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:03 Step: Source shape: (3766, 15128)
+[INFO]  2025-06-12 17:55:03 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:03 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:03 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:03 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:03 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:03 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:03 Step: Subset shape: (4, 96, 173)
+[INFO]  2025-06-12 17:55:03 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:03 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:03 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:03 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:03 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-12 17:55:04 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:04 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:05 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:05 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:05 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:05 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:05 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:05 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:05 Step: Source transform: | 0.00, 0.00, 11.15|
+| 0.00,-0.00, 48.36|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:05 Step: Source shape: (3836, 14732)
+[INFO]  2025-06-12 17:55:05 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:05 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:05 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:05 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:05 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:05 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:05 Step: Subset shape: (4, 97, 172)
+[INFO]  2025-06-12 17:55:05 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:05 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:05 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:05 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:05 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-12 17:55:05 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:06 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:06 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:06 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:06 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:06 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:06 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:06 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:06 Step: Source transform: | 0.00, 0.00, 11.10|
+| 0.00,-0.00, 48.53|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:06 Step: Source shape: (3839, 14800)
+[INFO]  2025-06-12 17:55:06 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:06 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:06 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:06 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:06 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:06 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:06 Step: Subset shape: (4, 87, 172)
+[INFO]  2025-06-12 17:55:06 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:06 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:06 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:06 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:07 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-12 17:55:07 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:07 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:08 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:08 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:08 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:08 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:08 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:08 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:08 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.26|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:08 Step: Source shape: (3740, 14959)
+[INFO]  2025-06-12 17:55:08 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:08 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:08 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:08 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:08 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:08 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:08 Step: Subset shape: (4, 96, 172)
+[INFO]  2025-06-12 17:55:08 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:08 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:08 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:08 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:08 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250524T170739_20250524T170806_059339_075D5F_E4AE] 2025-06-12 17:55:09 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Detected processing type: _dB_final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Subsetting for AOI: Eitelsried_Fields_total
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:09 Output file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:09 Step: Starting subsetting process
+[INFO]  2025-06-12 17:55:09 Step: Input: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:09 Step: KML: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:09 Step: Output: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:09 Step: Opening source: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final.dim.tif
+[INFO]  2025-06-12 17:55:10 Step: Source CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:10 Step: Source transform: | 0.00, 0.00, 10.28|
+| 0.00,-0.00, 48.31|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:10 Step: Source shape: (3766, 15128)
+[INFO]  2025-06-12 17:55:10 Step: Reading KML file: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess//kml/Eitelsried_Fields_total.kml
+[INFO]  2025-06-12 17:55:10 Step: KML CRS: EPSG:4326
+[INFO]  2025-06-12 17:55:10 Step: Number of geometries: 8
+[INFO]  2025-06-12 17:55:10 Step: Transforming geometries to raster CRS (EPSG:4326)
+[INFO]  2025-06-12 17:55:10 Step: Number of valid geometries: 8
+[INFO]  2025-06-12 17:55:10 Step: Applying mask and cropping to footprint
+[INFO]  2025-06-12 17:55:10 Step: Subset shape: (4, 97, 172)
+[INFO]  2025-06-12 17:55:10 Step: Subset transform: | 0.00, 0.00, 11.17|
+| 0.00,-0.00, 48.19|
+| 0.00, 0.00, 1.00|
+[INFO]  2025-06-12 17:55:10 Step: Writing output to: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:10 Step: Subset saved successfully: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets/S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71_dB_final_Eitelsried_Fields_total_subset.tif
+[INFO]  2025-06-12 17:55:10 Step: Subsetting process completed
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:10 Extracting statistics for AOI: Eitelsried_Fields_total
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250528T052659_20250528T052726_059390_075F2B_7E71] 2025-06-12 17:55:10 Statistics extraction failed for AOI: Eitelsried_Fields_total
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286] 2025-06-13 14:39:30 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05] 2025-06-13 14:39:31 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31 Detected processing type: _final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250406T170739_20250406T170806_058639_07427F_22BA] 2025-06-13 14:39:31 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558] 2025-06-13 14:39:32 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32 Detected processing type: _final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250410T052700_20250410T052727_058690_074497_8231] 2025-06-13 14:39:32 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE] 2025-06-13 14:39:32 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33 Detected processing type: _poldecomp_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB] 2025-06-13 14:39:33 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33 Detected processing type: _final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250418T170739_20250418T170806_058814_0749A8_1E9C] 2025-06-13 14:39:33 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E] 2025-06-13 14:39:34 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF_poldecomp_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34 Detected processing type: _poldecomp_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250422T052700_20250422T052727_058865_074BC1_2FCF] 2025-06-13 14:39:34 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4] 2025-06-13 14:39:34 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7] 2025-06-13 14:39:35 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35 Detected processing type: _final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250430T170740_20250430T170807_058989_0750CA_7369] 2025-06-13 14:39:35 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3] 2025-06-13 14:39:36 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250504T052700_20250504T052727_059040_0752C4_F8A5] 2025-06-13 14:39:36 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:36 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:36 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:36   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:36   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:36   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:37 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:37 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5] 2025-06-13 14:39:37 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1] 2025-06-13 14:39:37 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250512T170739_20250512T170806_059164_07574E_F1A8] 2025-06-13 14:39:37 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38 No input TIF file found containing '_final' for scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38 Searching in directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44] 2025-06-13 14:39:38 Available files:
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250516T052700_20250516T052727_059215_075912_74A0] 2025-06-13 14:39:38 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A] 2025-06-13 14:39:39 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+----------------------------------------
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39 Starting subsetting for scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39 Debug information:
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39   AOI path: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39   Subset output directory: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39   Stats CSV: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39 Found input file: /home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/final/S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim.tif
+[INFO] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39 Detected processing type: _dB_final
+[ERROR] [Scene: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14] 2025-06-13 14:39:39 AOI file not found or not readable: /home/mdugue/code/PhD_SAR4AGRI/PhD_SAR4AGRI/Sentinel-1/Sentinel_code/SCOUT_preprocess/../kml/Eitelsried_Fields_total.kml

@@ -33,3 +33,90 @@
 2025-06-12 12:45:27,516 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
 2025-06-12 13:06:42,554 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
 2025-06-12 13:28:19,183 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-12 18:27:08,906 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:10,003 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:11,048 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:12,084 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:13,116 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:13,921 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:14,681 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:15,695 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:16,727 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:17,753 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:18,789 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:19,824 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:20,858 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:21,898 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:22,938 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:23,973 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:25,004 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:26,039 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:27,081 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:28,124 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:29,167 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:30,207 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:31,248 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:27:32,291 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:09,046 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:10,064 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:11,102 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:12,137 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:13,173 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:14,207 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:15,240 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:16,282 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:17,321 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:18,359 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:19,407 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:20,430 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:21,470 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:22,512 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:23,535 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:24,396 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:25,424 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:26,450 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:27,486 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:28,521 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:29,567 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:30,610 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:31,647 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-12 18:34:32,686 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:19,597 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:20,680 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:21,758 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:22,827 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:23,903 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:25,027 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:26,166 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:27,256 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:28,407 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:29,580 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:30,723 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:31,796 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:32,930 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:34,069 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:35,139 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:36,227 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:37,294 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:38,443 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:39,574 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:40,714 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:41,824 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:42,976 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:44,115 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 10:53:45,262 [ERROR] [PREPROCESS] AOI path does not exist: /kml/Eitelsried_Fields_total.kml
+2025-06-13 11:09:57,369 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 11:28:43,186 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 11:53:22,361 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 12:19:41,848 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 12:41:56,848 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:02:57,755 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:31:44,724 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:33:31,257 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:35:17,197 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:37:04,244 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:39:42,551 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:53:32,717 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250410T052634_20250410T052702_058690_074497_0558.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 13:58:54,930 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250422T052634_20250422T052702_058865_074BC1_2D8E.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 14:04:12,820 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250504T052634_20250504T052702_059040_0752C4_9BD3.SAFE.zip: No intersecting bursts found between AOI and scene
+2025-06-13 14:09:20,148 [ERROR] [PREPROCESS] Scene S1A_IW_SLC__1SDV_20250516T052634_20250516T052702_059215_075912_2D44.SAFE.zip: No intersecting bursts found between AOI and scene

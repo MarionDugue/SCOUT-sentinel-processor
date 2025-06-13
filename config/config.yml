@@ -1,9 +1,9 @@
 workflow:
-  find_ids: 1
-  download: 1
-  skip_existing: 1
-  pre_process: 1
-  subset: 1  # New toggle for subsetting
+  find_ids: 0
+  download: 0
+  skip_existing: 0
+  pre_process: 0
+  subset: 1
 
   
 input:
@@ -34,15 +34,15 @@ sentinel1:
     gpt_path: "/home/mdugue/esa-snap/bin/gpt"  # Path to SNAP's gpt executable
     dem_path: "/home/mdugue/cds/working/Marion/AGRI4SAR/DEM/srtm_germany_dtm.tif"  # Path to DEM suitable for AOI
     graphs:
-      - name: "split_orb_complexCal_deb_writeBEAM"
-        path: "sentinel1/snap_graphs/split_orb_complexCal_deb_writeBEAM.xml"
-        output_suffix: "_split_Orb.dim"
-      - name: "readBEAM_spkl_decomp_TC_WriteTIFF"
-        path: "sentinel1/snap_graphs/readBEAM_spkl_decomp_TC_WriteTIFF.xml"
-        output_suffix: "_poldecomp_final.dim"
-      #- name: "split_Orb_Cal_deb_ML_dB_TC_10m_IA"
-      #  path: "sentinel1/snap_graphs/split_Orb_Cal_deb_ML_dB_TC_10m_IA.xml"
-      #  output_suffix: "_finaldB.dim"
+      #- name: "split_orb_complexCal_deb_writeBEAM"
+      #  path: "sentinel1/snap_graphs/split_orb_complexCal_deb_writeBEAM.xml"
+      #  output_suffix: "_split_Orb.dim"
+      #- name: "readBEAM_spkl_decomp_TC_WriteTIFF"
+      #  path: "sentinel1/snap_graphs/readBEAM_spkl_decomp_TC_WriteTIFF.xml"
+      #  output_suffix: "_poldecomp_final.dim"
+      - name: "split_Orb_Cal_deb_ML_dB_TC_10m_IA"
+        path: "sentinel1/snap_graphs/split_Orb_Cal_deb_ML_dB_TC_10m_IA.xml"
+        output_suffix: "_dB_final.dim"
     output_dir: "../data/processed"  # Directory for processed outputs
 
   download_url: "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value"
@@ -86,11 +86,14 @@ logging:
 # Add new subsetting section
 subsetting:
   kml_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/kml/Eitelsried_Fields_kml"
-  output_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/S1_april_2025_eitelsried/subsets"
+  output_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets"
   stats_csv: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv"
   scripts:
-    subset_script: "scripts/subset_raster.py"
-    stats_script: "scripts/extract_stats.py"
+    subset_script: "sentinel1/subset_raster.py"
+    stats_script: "sentinel1/extract_stats.py"
+  logs:
+    subset_log: "sentinel1/logs/subset.log"
+    stats_log: "sentinel1/logs/stats.log"
 
 
 

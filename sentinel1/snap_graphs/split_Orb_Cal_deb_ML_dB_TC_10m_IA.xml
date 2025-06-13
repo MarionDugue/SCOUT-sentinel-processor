@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <graph id="Graph">
   <version>1.0</version>
   <node id="Read">
@@ -12,7 +13,7 @@
       <maskNames/>
     </parameters>
   </node>
-    <node id="TOPSAR-Split">
+  <node id="TOPSAR-Split">
     <operator>TOPSAR-Split</operator>
     <sources>
       <sourceProduct refid="Read"/>
@@ -64,7 +65,7 @@
       <selectedPolarisations/>
     </parameters>
   </node>
-    <node id="Multilook">
+  <node id="Multilook">
     <operator>Multilook</operator>
     <sources>
       <sourceProduct refid="TOPSAR-Deburst"/>
@@ -77,7 +78,7 @@
       <grSquarePixel>true</grSquarePixel>
     </parameters>
   </node>
-    <node id="LinearToFromdB">
+  <node id="LinearToFromdB">
     <operator>LinearToFromdB</operator>
     <sources>
       <sourceProduct refid="Multilook"/>
@@ -86,7 +87,7 @@
       <sourceBands/>
     </parameters>
   </node>
-    <node id="Terrain-Correction">
+  <node id="Terrain-Correction">
     <operator>Terrain-Correction</operator>
     <sources>
       <sourceProduct refid="LinearToFromdB"/>
@@ -94,12 +95,12 @@
     <parameters class="com.bc.ceres.binding.dom.XppDomElement">
       <sourceBands/>
       <demName>External DEM</demName>
-      <externalDEMFile>/home/mdugue/cds/working/Marion/AGRI4SAR/DEM/switzerland_dem.tif</externalDEMFile>
+      <externalDEMFile>${dem_path}</externalDEMFile>
       <externalDEMNoDataValue>0.0</externalDEMNoDataValue>
       <externalDEMApplyEGM>true</externalDEMApplyEGM>
       <demResamplingMethod>NEAREST_NEIGHBOUR</demResamplingMethod>
       <imgResamplingMethod>NEAREST_NEIGHBOUR</imgResamplingMethod>
-      <pixelSpacingInMeter>10</pixelSpacingInMeter>
+      <pixelSpacingInMeter>10.0</pixelSpacingInMeter>
       <pixelSpacingInDegree>8.983152841195215E-5</pixelSpacingInDegree>
       <mapProjection>GEOGCS[&quot;WGS84(DD)&quot;, 
   DATUM[&quot;WGS84&quot;, 
@@ -146,14 +147,29 @@
     <node id="Read">
       <displayPosition x="37.0" y="134.0"/>
     </node>
-    <node id="Apply-Orbit-File">
+    <node id="TOPSAR-Split">
       <displayPosition x="124.0" y="135.0"/>
     </node>
+    <node id="Apply-Orbit-File">
+      <displayPosition x="211.0" y="135.0"/>
+    </node>
     <node id="Calibration">
-      <displayPosition x="410.0" y="133.0"/>
+      <displayPosition x="298.0" y="135.0"/>
+    </node>
+    <node id="TOPSAR-Deburst">
+      <displayPosition x="385.0" y="135.0"/>
+    </node>
+    <node id="Multilook">
+      <displayPosition x="472.0" y="135.0"/>
+    </node>
+    <node id="LinearToFromdB">
+      <displayPosition x="559.0" y="135.0"/>
+    </node>
+    <node id="Terrain-Correction">
+      <displayPosition x="646.0" y="135.0"/>
     </node>
     <node id="Write">
-      <displayPosition x="551.0" y="131.0"/>
+      <displayPosition x="733.0" y="135.0"/>
     </node>
   </applicationData>
 </graph>
