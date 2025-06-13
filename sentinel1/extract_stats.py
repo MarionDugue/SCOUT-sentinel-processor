@@ -38,6 +38,8 @@ def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, scene_id
         return None
 
     return {
+        "scene_id": scene_id,
+        "field_id": field_id,
         "mean_VV": mean_vv,
         "variance_VV": float(np.var(data_vv)),
         "min_VV": float(np.min(data_vv)),
@@ -45,7 +47,7 @@ def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, scene_id
         "mean_VH": mean_vh,
         "variance_VH": float(np.var(data_vh)),
         "min_VH": float(np.min(data_vh)),
-        "max_VH": float(np.max(data_vh)),
+        "max_VH": float(np.max(data_vh))
     }
 
 def extract_poldecomp_stats(data_entropy: np.ndarray, data_alpha: np.ndarray, scene_id: str, field_id: str) -> dict:
@@ -122,19 +124,18 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
                 stats = extract_poldecomp_stats(band1, band2, scene_id, field_id)
                 if stats is None:
                     return None
+                # Add common fields for poldecomp
+                stats.update({
+                    "acquisition_time": pd.to_datetime(acquisition_time),
+                    "data_type": "poldecomp"
+                })
             else:  # backscatter
                 log_info("Processing backscatter data (VV/VH)")
                 stats = extract_backscatter_stats(band1, band2, scene_id, field_id)
                 if stats is None:
                     return None
-
-            # Add common fields
-            stats.update({
-                "scene_id": scene_id,
-                "field_id": field_id,
-                "acquisition_time": pd.to_datetime(acquisition_time),
-                "data_type": "poldecomp" if is_poldecomp else "backscatter"
-            })
+                # Add acquisition time for backscatter
+                stats["acquisition_time"] = pd.to_datetime(acquisition_time)
 
             log_info(f"Statistics computed successfully for {scene_id}")
             return stats
@@ -145,35 +146,52 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
 
 def main():
     parser = argparse.ArgumentParser(description="Extract statistics from subset raster")
-    parser.add_argument("--config", required=True, help="Path to config file")
-    parser.add_argument("--input", required=True, help="Path to input raster")
-    parser.add_argument("--scene_id", required=True, help="Scene identifier")
-    parser.add_argument("--field_id", required=True, help="Field identifier")
-    parser.add_argument("--acquisition_time", required=True, help="Acquisition time (YYYY-MM-DDTHH:MM:SS)")
-    parser.add_argument("--output_csv", required=True, help="Path to output CSV file")
-    parser.add_argument("--log", help="Path to log file")
-    
+    parser.add_argument("input_path", help="Path to input raster file")
+    parser.add_argument("scene_id", help="Scene identifier")
+    parser.add_argument("field_id", help="Field identifier")
+    parser.add_argument("acquisition_time", help="Acquisition time in ISO format")
+    parser.add_argument("output_csv", help="Base path for output CSV file (without extension)")
+    parser.add_argument("--log", help="Path to log file", default=None)
     args = parser.parse_args()
-    
-    # Set up logging if log file specified
-    if args.log:
-        log_file = open(args.log, 'a')
-        sys.stdout = log_file
-        sys.stderr = log_file
-    
+
     try:
-        stats = extract_stats(args.input, args.scene_id, args.field_id, args.acquisition_time)
+        if args.log:
+            log_file = open(args.log, 'a')
+            sys.stdout = log_file
+            sys.stderr = log_file
+
+        # Extract statistics
+        stats = extract_stats(args.input_path, args.scene_id, args.field_id, args.acquisition_time)
         if stats is None:
             sys.exit(1)
-            
+
+        # Convert to DataFrame
         df = pd.DataFrame([stats])
-        log_info(f"Saving statistics to: {args.output_csv}")
+
+        # Determine output CSV path based on data type
+        input_filename = Path(args.input_path).name
+        is_poldecomp = '_poldecomp_' in input_filename
+        
+        # Ensure output_csv is a file path, not a directory
+        output_base = Path(args.output_csv)
+        if output_base.is_dir():
+            output_base = output_base / "stats_s1"
+        
+        if is_poldecomp:
+            output_csv = str(output_base) + "_poldecomp.csv"
+            log_info(f"Saving polarimetric decomposition statistics to: {output_csv}")
+        else:  # backscatter
+            output_csv = str(output_base) + "_backscatter.csv"
+            log_info(f"Saving backscatter statistics to: {output_csv}")
+        
+        # Create parent directories if they don't exist
+        Path(output_csv).parent.mkdir(parents=True, exist_ok=True)
         
         # Append to existing CSV if it exists, otherwise create new
-        if os.path.exists(args.output_csv):
-            df.to_csv(args.output_csv, mode='a', header=False, index=False)
+        if os.path.exists(output_csv):
+            df.to_csv(output_csv, mode='a', header=False, index=False)
         else:
-            df.to_csv(args.output_csv, index=False)
+            df.to_csv(output_csv, index=False)
         
     except Exception as e:
         log_error(f"Failed to process statistics: {e}")

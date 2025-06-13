@@ -83,17 +83,20 @@ logging:
   error_log: "error_log.txt"
   process_log: "process_log.txt"
 
-# Add new subsetting section
+# Subsetting configuration
 subsetting:
-  kml_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/kml/Eitelsried_Fields_kml"
-  output_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs/subsets"
-  stats_csv: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/stats_s1_backscatter.csv"
+  # Directory containing individual field KML files (relative to base_dir)
+  kml_dir: "../kml/Eitelsried_Fields_kml"
+  # Base path for statistics CSV files (relative to base_dir, without extension)
+  stats_csv: "data/stats_s1"
+  # Script paths (relative to sentinel1 directory)
   scripts:
-    subset_script: "sentinel1/subset_raster.py"
-    stats_script: "sentinel1/extract_stats.py"
+    subset_script: "subset_raster.py"
+    stats_script: "extract_stats.py"
+  # Log paths (relative to sentinel1 directory)
   logs:
-    subset_log: "sentinel1/logs/subset.log"
-    stats_log: "sentinel1/logs/stats.log"
+    subset_log: "logs/subset.log"
+    stats_log: "logs/stats.log"
 
 
 
