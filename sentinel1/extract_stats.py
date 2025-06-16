@@ -13,6 +13,7 @@ import numpy as np
 import rasterio
 from pathlib import Path
 import os
+import yaml
 
 def log_info(message: str):
     """Log an informational message with timestamp."""
@@ -155,6 +156,10 @@ def main():
     
     args = parser.parse_args()
     
+    # Load config file
+    with open(args.config, 'r') as f:
+        config = yaml.safe_load(f)
+    
     # Set up logging if log file specified
     if args.log:
         log_file = open(args.log, 'a')
@@ -169,12 +174,22 @@ def main():
         df = pd.DataFrame([stats])
         data_type = stats["data_type"]
         
-        # Determine output CSV path based on data type
+        # Get config variables for filename
+        s1_config = config['sentinel1']
+        start_date = config['input']['start_date'].replace('-', '')
+        end_date = config['input']['end_date'].replace('-', '')
+        rel_orbit = s1_config.get('rel_orbit', 'ALL')
+        
+        # Get output directory from config
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(args.config))), config['output']['base_dir'])
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Create descriptive filename
         if data_type == "poldecomp":
-            output_csv = f"{args.output_csv}_poldecomp.csv"
+            output_csv = os.path.join(output_dir, f"stats_poldecomp_S1_{s1_config['satellite']}_{s1_config['mode']}_{s1_config['level']}_{s1_config['polarisation'].replace('+', '')}_{start_date}_{end_date}_orbit{rel_orbit}.csv")
             log_info(f"Saving polarimetric decomposition statistics to: {output_csv}")
         else:  # backscatter
-            output_csv = f"{args.output_csv}_backscatter.csv"
+            output_csv = os.path.join(output_dir, f"stats_dB_S1_{s1_config['satellite']}_{s1_config['mode']}_{s1_config['level']}_{s1_config['polarisation'].replace('+', '')}_{start_date}_{end_date}_orbit{rel_orbit}.csv")
             log_info(f"Saving backscatter statistics to: {output_csv}")
         
         # Append to existing CSV if it exists, otherwise create new
