@@ -3,8 +3,8 @@ workflow:
   download: 0
   skip_existing: 0
   pre_process: 0
-  subset: 1
-  extract_metric: 0
+  subset: 0
+  extract_metric: 1
 
   
 input:

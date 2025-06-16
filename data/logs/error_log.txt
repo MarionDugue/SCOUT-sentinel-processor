@@ -1,120 +1,61 @@
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:14 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:15 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:16 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:17 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:18 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:19 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:20 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:21 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:22 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:23 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_wheat.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:23 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_potatoe.kml :not well-formed (invalid token) on line 1 at offset 0
-[ERROR] 2025-06-16 17:48:23 Step: Failed to read KML file: ERROR parsing kml ../kml/Eitelsried_Fields_kml/._eitelsried_maize.kml :not well-formed (invalid token) on line 1 at offset 0
+[ERROR] 2025-06-16 18:02:50 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:51 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:53 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:53 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:55 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:55 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:57 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:58 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:02:59 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:00 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:01 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:02 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:03 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:04 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:05 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:06 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:07 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:08 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:09 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:10 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_poldecomp_final.dim_eitelsried_maize.tif
+[ERROR] 2025-06-16 18:03:11 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:12 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:13 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:14 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:16 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:16 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:18 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:18 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:20 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:21 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:22 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:23 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:24 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:25 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:27 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:27 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:28 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:29 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:31 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:31 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_poldecomp_final.dim_eitelsried_potatoe.tif
+[ERROR] 2025-06-16 18:03:32 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:33 Failed to process dB file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:34 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:35 Failed to process dB file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:36 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:37 Failed to process dB file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:39 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:39 Failed to process dB file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:41 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:41 Failed to process dB file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_dB_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:43 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165922_20250401T165949_058566_073F7A_9286_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:43 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250401T165947_20250401T170015_058566_073F7A_9D05_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:45 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165922_20250413T165949_058741_0746A9_00DE_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:45 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250413T165947_20250413T170015_058741_0746A9_DFCB_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:47 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165922_20250425T165949_058916_074DCC_6DB4_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:47 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250425T165947_20250425T170015_058916_074DCC_68E7_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:49 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165922_20250507T165949_059091_0754BF_ACE5_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:50 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250507T165947_20250507T170015_059091_0754BF_2AB1_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:51 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165922_20250519T165949_059266_075AC7_B84A_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:52 Failed to process poldecomp file: S1A_IW_SLC__1SDV_20250519T165947_20250519T170015_059266_075AC7_4D14_poldecomp_final.dim_eitelsried_wheat.tif
+[ERROR] 2025-06-16 18:03:53 Partially successful: processed 60 of 120 files
