@@ -25,16 +25,17 @@ def log_error(message: str):
     ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f"[ERROR] {ts} Step: {message}", file=sys.stderr)
 
-def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, scene_id: str, field_id: str) -> dict:
-    """Extract statistics from backscatter data (VV/VH)."""
+def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, data_epsia: np.ndarray, scene_id: str, field_id: str) -> dict:
+    """Extract statistics from backscatter data (VV/VH/epsIA)."""
     mean_vv = float(np.mean(data_vv))
     mean_vh = float(np.mean(data_vh))
+    mean_epsia = float(np.mean(data_epsia))
 
-    # Error condition if either mean is zero
-    if mean_vv == 0.0 or mean_vh == 0.0:
+    # Error condition if any mean is zero
+    if mean_vv == 0.0 or mean_vh == 0.0 or mean_epsia == 0.0:
         log_error(
-            f"Scene {scene_id}, field {field_id}: mean_VV = {mean_vv}, mean_VH = {mean_vh}. "
-            f"One or both values are 0 — possible edge case."
+            f"Scene {scene_id}, field {field_id}: mean_VV = {mean_vv}, mean_VH = {mean_vh}, mean_epsIA = {mean_epsia}. "
+            f"One or more values are 0 — possible edge case."
         )
         return None
 
@@ -47,18 +48,24 @@ def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, scene_id
         "variance_VH": float(np.var(data_vh)),
         "min_VH": float(np.min(data_vh)),
         "max_VH": float(np.max(data_vh)),
+        "mean_epsIA": mean_epsia,
+        "variance_epsIA": float(np.var(data_epsia)),
+        "min_epsIA": float(np.min(data_epsia)),
+        "max_epsIA": float(np.max(data_epsia)),
     }
 
-def extract_poldecomp_stats(data_entropy: np.ndarray, data_alpha: np.ndarray, scene_id: str, field_id: str) -> dict:
-    """Extract statistics from polarimetric decomposition data (entropy/alpha)."""
+def extract_poldecomp_stats(data_entropy: np.ndarray, data_anisotropy: np.ndarray, data_alpha: np.ndarray, data_epsia: np.ndarray, scene_id: str, field_id: str) -> dict:
+    """Extract statistics from polarimetric decomposition data (entropy/anisotropy/alpha/epsIA)."""
     mean_entropy = float(np.mean(data_entropy))
+    mean_anisotropy = float(np.mean(data_anisotropy))
     mean_alpha = float(np.mean(data_alpha))
+    mean_epsia = float(np.mean(data_epsia))
 
-    # Error condition if either mean is zero
-    if mean_entropy == 0.0 or mean_alpha == 0.0:
+    # Error condition if any mean is zero
+    if mean_entropy == 0.0 or mean_anisotropy == 0.0 or mean_alpha == 0.0 or mean_epsia == 0.0:
         log_error(
-            f"Scene {scene_id}, field {field_id}: mean_entropy = {mean_entropy}, mean_alpha = {mean_alpha}. "
-            f"One or both values are 0 — possible edge case."
+            f"Scene {scene_id}, field {field_id}: mean_entropy = {mean_entropy}, mean_anisotropy = {mean_anisotropy}, "
+            f"mean_alpha = {mean_alpha}, mean_epsIA = {mean_epsia}. One or more values are 0 — possible edge case."
         )
         return None
 
@@ -67,10 +74,18 @@ def extract_poldecomp_stats(data_entropy: np.ndarray, data_alpha: np.ndarray, sc
         "variance_entropy": float(np.var(data_entropy)),
         "min_entropy": float(np.min(data_entropy)),
         "max_entropy": float(np.max(data_entropy)),
+        "mean_anisotropy": mean_anisotropy,
+        "variance_anisotropy": float(np.var(data_anisotropy)),
+        "min_anisotropy": float(np.min(data_anisotropy)),
+        "max_anisotropy": float(np.max(data_anisotropy)),
         "mean_alpha": mean_alpha,
         "variance_alpha": float(np.var(data_alpha)),
         "min_alpha": float(np.min(data_alpha)),
         "max_alpha": float(np.max(data_alpha)),
+        "mean_epsIA": mean_epsia,
+        "variance_epsIA": float(np.var(data_epsia)),
+        "min_epsIA": float(np.min(data_epsia)),
+        "max_epsIA": float(np.max(data_epsia)),
     }
 
 def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_time: str) -> dict:
@@ -94,38 +109,43 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
 
         with rasterio.open(input_path) as src:
             log_info("reading_bands")
-            band1 = src.read(1)
-            band2 = src.read(2)
-
-            log_info(f"Input file: {input_path}")
+            
+            # Define band indices based on data type
             if is_poldecomp:
-                log_info(f"Entropy range: {np.min(band1)} to {np.max(band1)}")
-                log_info(f"Alpha range: {np.min(band2)} to {np.max(band2)}")
+                # For poldecomp: bands 1,2,3,5 for entropy, anisotropy, alpha, epsIA
+                band_indices = [1, 2, 3, 5]
+                band_names = ['entropy', 'anisotropy', 'alpha', 'epsIA']
             else:  # backscatter
-                log_info(f"VV range: {np.min(band1)} to {np.max(band1)}")
-                log_info(f"VH range: {np.min(band2)} to {np.max(band2)}")
+                # For backscatter: bands 1,2,4 for VV, VH, epsIA
+                band_indices = [1, 2, 4]
+                band_names = ['VV', 'VH', 'epsIA']
+            
+            # Read all required bands
+            bands = [src.read(i) for i in band_indices]
+            
+            log_info(f"Input file: {input_path}")
+            for band, name in zip(bands, band_names):
+                log_info(f"{name} range: {np.min(band)} to {np.max(band)}")
 
             nodata = src.nodata
             if nodata is not None:
                 log_info(f"Nodata value: {nodata}")
-                band1 = band1[band1 != nodata]
-                band2 = band2[band2 != nodata]
+                bands = [band[band != nodata] for band in bands]
             else:
                 log_info("No nodata value specified")
-                band1 = band1[np.isfinite(band1)]
-                band2 = band2[np.isfinite(band2)]
+                bands = [band[np.isfinite(band)] for band in bands]
 
             log_info("computing_statistics")
             
             # Extract statistics based on file type
             if is_poldecomp:
-                log_info("Processing polarimetric decomposition data (entropy/alpha)")
-                stats = extract_poldecomp_stats(band1, band2, scene_id, field_id)
+                log_info("Processing polarimetric decomposition data (entropy/anisotropy/alpha/epsIA)")
+                stats = extract_poldecomp_stats(bands[0], bands[1], bands[2], bands[3], scene_id, field_id)
                 if stats is None:
                     return None
             else:  # backscatter
-                log_info("Processing backscatter data (VV/VH)")
-                stats = extract_backscatter_stats(band1, band2, scene_id, field_id)
+                log_info("Processing backscatter data (VV/VH/epsIA)")
+                stats = extract_backscatter_stats(bands[0], bands[1], bands[2], scene_id, field_id)
                 if stats is None:
                     return None
 

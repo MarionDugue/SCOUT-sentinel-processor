@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 
 """
-Subset dual-band TIFFs by KML polygons.
+Subset raster files by multiple KML polygons.
+For each input scene, creates subsets for each KML in the specified directory.
+All parameters are read from the config file.
 """
 
 import os
 import sys
 import argparse
 import traceback
+import yaml
 from pathlib import Path
 from datetime import datetime
 
@@ -23,7 +26,7 @@ def log_info(message: str, log_file=None):
     print(msg)
     if log_file:
         log_file.write(msg + '\n')
-        log_file.flush()  # Ensure immediate write
+        log_file.flush()
 
 def log_error(message: str, log_file=None):
     """Log an error message with timestamp."""
@@ -32,7 +35,7 @@ def log_error(message: str, log_file=None):
     print(msg, file=sys.stderr)
     if log_file:
         log_file.write(msg + '\n')
-        log_file.flush()  # Ensure immediate write
+        log_file.flush()
 
 def subset_raster(input_path: str, output_path: str, kml_path: str, log_file=None) -> bool:
     """
@@ -112,6 +115,9 @@ def subset_raster(input_path: str, output_path: str, kml_path: str, log_file=Non
                 "transform": subset_transform
             })
 
+            # Ensure output directory exists
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
             log_info(f"Writing output to: {output_path}", log_file)
             try:
                 with rasterio.open(output_path, "w", **out_meta) as dst:
@@ -132,36 +138,129 @@ def subset_raster(input_path: str, output_path: str, kml_path: str, log_file=Non
         log_error(f"Traceback: {traceback.format_exc()}", log_file)
         return False
 
+def process_scene_with_kmls(input_file: str, kml_dir: str, output_dir: str, log_file: str) -> None:
+    """
+    Process a single scene with all KMLs in the directory.
+    
+    Args:
+        input_file: Path to input TIF file
+        kml_dir: Directory containing KML files
+        output_dir: Base output directory (will create subdirectories for each KML)
+        log_file: Path to log file
+    """
+    # Get the complete scene name from the input file path
+    scene_name = os.path.basename(input_file).replace('.tif', '')
+    
+    # Get list of KML files
+    kml_files = [f for f in os.listdir(kml_dir) if f.endswith('.kml')]
+    if not kml_files:
+        log_error(f"No KML files found in {kml_dir}", log_file)
+        return
+
+    # Process each KML file
+    for kml_file in kml_files:
+        kml_name = os.path.splitext(kml_file)[0]  # Get KML name without extension
+        kml_path = os.path.join(kml_dir, kml_file)
+        
+        # Create output directory for this KML
+        kml_output_dir = os.path.join(output_dir, kml_name)
+        os.makedirs(kml_output_dir, exist_ok=True)
+        
+        # Set output file name to include both complete scene name and field name
+        output_file = os.path.join(kml_output_dir, f"{scene_name}_{kml_name}.tif")
+        
+        log_info(f"Processing KML: {kml_name}")
+        log_info(f"Output will be saved to: {output_file}")
+        
+        try:
+            # Process the subset
+            subset_raster(input_file, output_file, kml_path, log_file)
+            log_info(f"Successfully created subset for {kml_name}")
+        except Exception as e:
+            log_error(f"Failed to process subset for {kml_name}: {str(e)}", log_file)
+            continue
+
+def get_config_paths(config: dict, base_dir: str) -> dict:
+    """
+    Get all necessary paths from config file.
+    
+    Args:
+        config: Loaded config dictionary
+        base_dir: Base directory for relative paths
+        
+    Returns:
+        dict: Dictionary containing all necessary paths
+    """
+    try:
+        # Get input paths - use absolute path from config
+        download_dir = config['sentinel1']['download_dir']  # Use absolute path directly
+        final_dir = os.path.join(download_dir, config['sentinel1']['snap']['output_dir'].replace('{download_dir}', download_dir))
+        
+        # Use absolute path for aoi_path from config
+        aoi_path = config['input']['aoi_path']  # Use absolute path directly
+        
+        # Set output directory to be under download_dir/final/subset
+        subset_dir = os.path.join(download_dir, 'final', 'subsets')
+        
+        return {
+            'input_dir': final_dir,  # Use the final directory from SNAP processing
+            'aoi_path': aoi_path,
+            'output_dir': subset_dir,  # This will be used as base directory for kml_field subdirectories
+        }
+    except KeyError as e:
+        raise ValueError(f"Missing required config parameter: {e}")
+
 def main():
-    parser = argparse.ArgumentParser(description="Subset raster by KML polygon")
-    parser.add_argument("--config", required=True, help="Path to config file")
-    parser.add_argument("--input", required=True, help="Path to input raster")
-    parser.add_argument("--kml", required=True, help="Path to KML file")
-    parser.add_argument("--output", required=True, help="Path to output subset")
-    parser.add_argument("--log", help="Path to log file")
-    
+    """Main function to process input files with KMLs."""
+    parser = argparse.ArgumentParser(description='Subset raster files using KML files')
+    parser.add_argument('--config', required=True, help='Path to config file')
+    parser.add_argument('--log', help='Path to log file')
     args = parser.parse_args()
-    
-    # Set up logging if log file specified
+
+    # Setup logging
     log_file = None
     if args.log:
         try:
-            # Ensure log directory exists
             os.makedirs(os.path.dirname(args.log), exist_ok=True)
             log_file = open(args.log, 'a')
-            log_info(f"Starting subsetting process", log_file)
-            log_info(f"Input: {args.input}", log_file)
-            log_info(f"KML: {args.kml}", log_file)
-            log_info(f"Output: {args.output}", log_file)
+            log_info("Starting subsetting process", log_file)
         except Exception as e:
             print(f"Failed to set up logging: {str(e)}", file=sys.stderr)
             sys.exit(1)
     
     try:
-        success = subset_raster(args.input, args.output, args.kml, log_file)
+        # Load config
+        with open(args.config, 'r') as f:
+            config = yaml.safe_load(f)
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(args.config)))
+        
+        # Get paths from config
+        paths = get_config_paths(config, base_dir)
+        
+        # Process input directory
+        input_path = Path(paths['input_dir'])
+        if not input_path.exists():
+            log_error(f"Input path does not exist: {input_path}", log_file)
+            sys.exit(1)
+            
+        if input_path.is_file():
+            # Single file processing
+            process_scene_with_kmls(str(input_path), paths['aoi_path'], paths['output_dir'], log_file)
+        else:
+            # Directory processing
+            tif_files = sorted(input_path.glob("*.tif"))
+            if not tif_files:
+                log_error(f"No TIFF files found in {input_path}", log_file)
+                sys.exit(1)
+                
+            log_info(f"Found {len(tif_files)} TIFF files to process", log_file)
+            for tif_file in tif_files:
+                process_scene_with_kmls(str(tif_file), paths['aoi_path'], paths['output_dir'], log_file)
+        
         if log_file:
             log_info("Subsetting process completed", log_file)
-        sys.exit(0 if success else 1)
+        sys.exit(0)
+        
     except Exception as e:
         if log_file:
             log_error(f"Unexpected error in main: {str(e)}", log_file)

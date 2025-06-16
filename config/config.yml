@@ -4,6 +4,7 @@ workflow:
   skip_existing: 0
   pre_process: 0
   subset: 1
+  extract_metric: 0
 
   
 input:
