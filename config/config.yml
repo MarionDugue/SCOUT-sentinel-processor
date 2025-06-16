@@ -43,7 +43,7 @@ sentinel1:
       - name: "split_Orb_Cal_deb_ML_dB_TC_10m_IA"
         path: "sentinel1/snap_graphs/split_Orb_Cal_deb_ML_dB_TC_10m_IA.xml"
         output_suffix: "_dB_final.dim"
-    output_dir: "../data/processed"  # Directory for processed outputs
+    output_dir: "{download_dir}/final"  # Directory for processed outputs
 
   download_url: "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value"
   download_dir: "/home/mdugue/cds/working/Marion/AGRI4SAR/AgriROSE-L_2025/refactored_code/working_SLCs" #for SLCs scenes, the download directory can be on a separate path/server
@@ -52,7 +52,6 @@ sentinel1:
     base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
     orderby: "ContentDate/Start"
     top: 1000
-
 
   polarisation_mapping:
     "1SDV": "VV+VH"
@@ -89,6 +88,8 @@ subsetting:
   kml_dir: "../kml/Eitelsried_Fields_kml"
   # Base path for statistics CSV files (relative to base_dir, without extension)
   stats_csv: "data/stats_s1"
+  # Output directory for subset data (relative to download_dir)
+  output_dir: "{download_dir}/final/subsets"
   # Script paths (relative to sentinel1 directory)
   scripts:
     subset_script: "subset_raster.py"
