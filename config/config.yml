@@ -29,6 +29,7 @@ sentinel1:
   polarisation: "VV+VH"         # Options: "VV", "HH", "VV+VH", "HH+HV"
   collection: "SENTINEL-1"      # Collection name for S1 data
   #rel_orbit: 14                # Optional: Filter by relative orbit number
+  descending_hour: 5          # Hour of day for descending orbit, dependent on AOI so check with Copernicus browser and  
 
   # SNAP processing configuration
   snap:

@@ -26,13 +26,14 @@ def log_error(message: str):
     ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f"[ERROR] {ts} Step: {message}", file=sys.stderr)
 
-def extract_orbit_info(scene_id: str, acquisition_time: str) -> tuple:
+def extract_orbit_info(scene_id: str, acquisition_time: str, descending_hour: int = 5) -> tuple:
     """
     Extract orbit direction and relative orbit from scene ID and acquisition time.
     
     Args:
         scene_id: Sentinel-1 scene identifier
         acquisition_time: Acquisition time in ISO format
+        descending_hour: Hour of day for descending orbit (default: 5)
         
     Returns:
         tuple: (orbit_direction, relative_orbit)
@@ -43,18 +44,20 @@ def extract_orbit_info(scene_id: str, acquisition_time: str) -> tuple:
         hour = acq_datetime.hour
         
         # Determine orbit direction based on hour
-        # Based on the reference code: if hour is 5, it's Descending, otherwise Ascending
-        orbit_direction = 'Descending' if hour == 5 else 'Ascending'
+        # Based on the reference code: if hour matches descending_hour, it's Descending, otherwise Ascending
+        orbit_direction = 'Descending' if hour == descending_hour else 'Ascending'
         
         # Extract absolute orbit number from scene ID
         # Sentinel-1 scene ID format: S1A_IW_SLC__1SDV_20240101T060000_20240101T060030_051234_062345_1234.SAFE
         # The absolute orbit number is typically in the 6th position after splitting by '_'
         scene_parts = scene_id.split('_')
+        log_info(f'scene id is here: {scene_id}')
+        
         
         if len(scene_parts) >= 6:
             # Try to extract absolute orbit from the 6th position
-            absolute_orbit_str = scene_parts[5]
-            
+            absolute_orbit_str = scene_parts[7]
+            log_info(f'absolute orbit nb is: {absolute_orbit_str}')
             # Clean the string to get only digits
             absolute_orbit_match = re.search(r'(\d+)', absolute_orbit_str)
             if absolute_orbit_match:
@@ -147,7 +150,7 @@ def extract_poldecomp_stats(data_entropy: np.ndarray, data_anisotropy: np.ndarra
         "max_epsIA": float(np.max(data_epsia)),
     }
 
-def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_time: str) -> dict:
+def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_time: str, config: dict = None) -> dict:
     """
     Extract statistics from a raster file.
     Handles both backscatter (dB) and polarimetric decomposition (entropy/alpha) statistics.
@@ -157,6 +160,7 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
         scene_id: Scene identifier
         field_id: Field identifier
         acquisition_time: Acquisition time in ISO format
+        config: Configuration dictionary containing sentinel1 settings
         
     Returns:
         dict: Dictionary containing statistics
@@ -208,9 +212,14 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
                 if stats is None:
                     return None
 
+            # Get descending hour from config, default to 5 if not specified
+            descending_hour = 5  # default value
+            if config and 'sentinel1' in config:
+                descending_hour = config['sentinel1'].get('descending_hour', 5)
+            
             # Extract orbit information
             log_info("extracting_orbit_information")
-            orbit_direction, relative_orbit = extract_orbit_info(scene_id, acquisition_time)
+            orbit_direction, relative_orbit = extract_orbit_info(scene_id, acquisition_time, descending_hour)
             
             # Add common fields
             stats.update({
@@ -252,7 +261,7 @@ def main():
         sys.stderr = log_file
     
     try:
-        stats = extract_stats(args.input, args.scene_id, args.field_id, args.acquisition_time)
+        stats = extract_stats(args.input, args.scene_id, args.field_id, args.acquisition_time, config)
         if stats is None:
             sys.exit(1)
             
