@@ -105,6 +105,22 @@ def download_scene(
     return new_zip_path
 
 
+def delete_zip_file(zip_path: str) -> None:
+    """Delete a zip file if it exists.
+    
+    Args:
+        zip_path: Path to the zip file to delete
+    """
+    try:
+        if os.path.exists(zip_path):
+            os.remove(zip_path)
+            logging.info(f"[DOWNLOAD] Deleted zip file: {zip_path}")
+        else:
+            logging.warning(f"[DOWNLOAD] Zip file not found for deletion: {zip_path}")
+    except Exception as e:
+        logging.error(f"[DOWNLOAD] Failed to delete zip file {zip_path}: {e}")
+
+
 def main():
     setup_logger()
 
@@ -127,6 +143,11 @@ def main():
         "download_url",
         "https://zipper.dataspace.copernicus.eu/odata/v1/Products({})/$value",
     )
+
+    # Get the delete_zip_after_preprocess setting from config, default to False
+    delete_after_processing = s1_cfg.get("delete_zip_after_preprocess", False)
+    if delete_after_processing:
+        logging.info("[DOWNLOAD] Zip file deletion after processing is enabled")
 
     # Use output_dir CLI argument if provided; else fallback to config
     if args.output_dir:
@@ -154,6 +175,10 @@ def main():
     )
     if downloaded_path:
         logging.info(f"[DOWNLOAD] Download finished successfully: {downloaded_path}")
+        
+        # Delete the zip file if enabled in config
+        if delete_after_processing:
+            delete_zip_file(downloaded_path)
     else:
         logging.error("[DOWNLOAD] Download failed.")
 
