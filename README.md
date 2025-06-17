@@ -122,6 +122,7 @@ sentinel2:
 ```
 
 ## Usage
+Sentinel-1 and Sentinel-2 preprocessing are done independently and do not rely on one another aside from sharing the same area of interest and timespan inpotuted in the config file. 
 
 ### Sentinel-1 Processing
 
@@ -129,7 +130,6 @@ sentinel2:
 ```bash
 cd scripts
 ./run_sentinel1.sh
-./run_sentinel2.sh
 ```
 
 #### Individual Steps
