@@ -9,6 +9,16 @@ import glob
 import argparse
 import logging
 
+# Constants moved from config file
+POLARISATION_MAPPING = {
+    "1SDV": "VV+VH",
+    "1SDH": "HH+HV", 
+    "1SSV": "VV",
+    "1SSH": "HH"
+}
+
+REMOVE_SUFFIX = ".SAFE"
+EMPTY_WKT = "MULTIPOLYGON EMPTY"
 
 def setup_logger(log_path):
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
@@ -42,7 +52,7 @@ def extract_wkt_from_kml(kml_path: str, layer: str = None) -> str:
     gdf = gpd.read_file(kml_path, driver="KML", layer=layer)
 
     if gdf.empty or gdf[gdf.geometry.type.isin(["Polygon", "MultiPolygon"])].empty:
-        return "MULTIPOLYGON EMPTY"
+        return EMPTY_WKT
 
     multipoly = gdf[
         gdf.geometry.type.isin(["Polygon", "MultiPolygon"])
@@ -119,9 +129,7 @@ def get_s1_data(wkt: str, config: dict) -> pd.DataFrame:
         df = df[df["relat_orbit"] == s1["rel_orbit"]]
 
     if "polarisation" in s1:
-        df["polarisation"] = df["polarisation"].replace(
-            {"1SDV": "VV+VH", "1SDH": "HH+HV", "1SSV": "VV", "1SSH": "HH"}
-        )
+        df["polarisation"] = df["polarisation"].replace(POLARISATION_MAPPING)
         df = df[df["polarisation"] == s1["polarisation"]]
 
     df = df[~df["Name"].str.contains("COG")]
@@ -186,7 +194,7 @@ def main():
         return
 
     # Remove '.SAFE' only from names, if you still need it elsewhere
-    df["Name"] = df["Name"].str.replace(".SAFE", "", regex=False)
+    df["Name"] = df["Name"].str.replace(REMOVE_SUFFIX, "", regex=False)
 
     # Save the 'Id' column (the UUIDs) instead of 'Name'
     df[["Id", "Name"]].to_csv(output_csv_path, index=False)

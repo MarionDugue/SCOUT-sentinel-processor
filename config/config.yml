@@ -55,25 +55,9 @@ sentinel1:
     orderby: "ContentDate/Start"
     top: 1000
 
-  polarisation_mapping:
-    "1SDV": "VV+VH"
-    "1SDH": "HH+HV"
-    "1SSV": "VV"
-    "1SSH": "HH"
-
-  product_formatting:
-    remove_suffix: ".SAFE"
-    default_csv_name: "s1_ids.csv"
-
-geometry:
-  empty_wkt: "MULTIPOLYGON EMPTY"
-
 copernicus_credentials:
   username: mdugue@student.ethz.ch
   password: ravpex-gUpwod-9fywma
-
-pre-processing:
-  snap_graph: 
 
 scripts:
   download_script: "sentinel1/s1_download_from_csv.py"
