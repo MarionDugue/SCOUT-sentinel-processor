@@ -1,4 +1,4 @@
-# SCOUT_preprocess
+# SCOUT-sentinel-processor
 
 A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite data, designed for agricultural remote sensing applications.
 
@@ -11,11 +11,10 @@ A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite d
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Workflow](#workflow)
-- [Development](#development)
 
 ## Overview
 
-SCOUT_preprocess automates the acquisition, processing, and analysis of SAR and optical satellite data for crop monitoring. It provides end-to-end automation from data discovery through preprocessing to statistical extraction.
+SCOUT-sentinel-processor automates the acquisition, processing, and statistical extraction of relevant metrics of SAR (eg. radar backscatter, entropy, alpha angles) and optical (NDVI) satellite data for crop monitoring.
 
 ### Key Capabilities
 
@@ -28,10 +27,9 @@ SCOUT_preprocess automates the acquisition, processing, and analysis of SAR and 
 
 ### Sentinel-1
 - Automated scene discovery via Copernicus Data Space
-- Configurable satellite selection (S1A, S1B, or both)
-- Multiple acquisition modes (IW, EW, SM) and polarizations (VV, VH, HH, HV)
+- Configurable satellite selection (S1A, S1B, or both), acquisition modes (IW, EW, SM) and polarizations (VV, VH, HH, HV)
 - SNAP-based preprocessing with custom graphs
-- Statistical extraction and field subsetting
+- Field subsetting and statistical extraction
 
 ### Sentinel-2
 - Google Earth Engine integration for scalable processing
@@ -42,27 +40,27 @@ SCOUT_preprocess automates the acquisition, processing, and analysis of SAR and 
 
 ### General
 - YAML-based configuration management
-- Comprehensive logging and error handling
-- CLI and script-based execution
 - Support for multiple vector formats (KML, GeoJSON, Shapefile)
 
 ## Architecture
 
 ```
-SCOUT_preprocess/
-├── config/                 # Configuration files
+SCOUT-sentinel-processor/
+├── config/                 
 │   └── config.yml         # Main configuration
-├── sentinel1/             # Sentinel-1 processing modules
+├── sentinel1/             
 │   ├── s1_find_ids.py     # Scene discovery
 │   ├── s1_download_from_csv.py  # Data download
 │   ├── subset_raster.py   # Field subsetting
 │   ├── extract_stats.py   # Statistical extraction
 │   └── snap_graphs/       # SNAP processing graphs
-├── sentinel2/             # Sentinel-2 processing modules
+├── sentinel2/             
 │   ├── cli.py            # Command-line interface
 │   ├── ndvi_exporter.py  # NDVI computation
 │   └── extract_ndvi_stats.py  # Statistics extraction
 ├── scripts/               # Execution scripts
+│   ├── run_sentinel1.sh  # bash script for running workflow of Sentinel-1 (backscatter and polarimetry examples)
+│   └── run_sentinel2.sh  # bash script for running workflow of Sentinel-2 (NDVI)
 ├── data/                  # Output data directory
 ├── kml/                   # Area of interest files
 └── logs/                  # Processing logs
@@ -76,7 +74,6 @@ SCOUT_preprocess/
 - Google Earth Engine account and authentication
 - Copernicus Data Space account
 - SNAP (Sentinel Application Platform)
-- Sufficient disk space for satellite data
 
 ### Setup
 
@@ -125,6 +122,7 @@ sentinel2:
 ```
 
 ## Usage
+Sentinel-1 and Sentinel-2 preprocessing are done independently and do not rely on one another aside from sharing the same area of interest and timespan inputted in the config file. 
 
 ### Sentinel-1 Processing
 
@@ -132,10 +130,10 @@ sentinel2:
 ```bash
 cd scripts
 ./run_sentinel1.sh
-./run_sentinel2.sh
 ```
 
 #### Individual Steps
+Either toggle 1 and 0 where wanted in the config file. All steps can work independently (ie only one step can be 1 whilst all the others are 0). Another way to run individual steps could be through their python script directly: 
 ```bash
 # Find available scenes
 python sentinel1/s1_find_ids.py --config config/config.yml
@@ -152,9 +150,14 @@ python sentinel1/extract_stats.py --config config/config.yml
 
 ### Sentinel-2 Processing
 
+#### Complete Pipeline
 ```bash
-cd sentinel2
+cd scripts
+./run_sentinel2.sh
+```
 
+#### Individual Steps
+```bash
 # NDVI export with statistics
 python cli.py --config ../config/config.yml --extract_stats
 
@@ -186,56 +189,5 @@ Input KML → Scene Discovery → Download → Preprocessing → Subsetting → 
 Field Boundaries → Cloud Filtering → NDVI Computation → Export → Analysis
 ```
 
-## Development
-
-### Code Structure
-
-```
-SCOUT_preprocess/
-├── config/                 # Configuration files
-├── sentinel1/             # Sentinel-1 processing modules
-├── sentinel2/             # Sentinel-2 processing modules
-├── scripts/               # Execution scripts
-├── data/                  # Output data directory
-├── kml/                   # Area of interest files
-└── logs/                  # Processing logs
-```
-
-### Adding New Features
-
-1. **New Processing Steps**: Add configuration parameters and implement processing functions
-2. **New Data Sources**: Extend data discovery and download interfaces
-3. **New Statistics**: Extend statistics extraction modules
-
-### Code Style
-
-- Follow PEP 8 standards
-- Use type hints for function parameters
-- Include docstrings for all public functions
-- Implement comprehensive error handling
-
-### Testing
-
-```bash
-# Run all tests
-pytest tests/
-
-# Run with coverage
-pytest --cov=sentinel1 --cov=sentinel2 tests/
-```
-
-## Support
-
-For questions and support:
-1. Check the documentation
-2. Review existing issues
-3. Create a new issue with detailed information
-
-## Acknowledgments
-
-- ESA for Sentinel satellite data
-- Google Earth Engine for cloud processing capabilities
-- SNAP development team for preprocessing tools
-- Copernicus Data Space for data access
 
 
