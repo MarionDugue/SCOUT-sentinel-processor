@@ -1,4 +1,4 @@
-# SCOUT_preprocess
+# SCOUT-sentinel-processor
 
 A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite data, designed for agricultural remote sensing applications.
 
@@ -14,7 +14,7 @@ A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite d
 
 ## Overview
 
-SCOUT_preprocess automates the acquisition, processing, and statistiacl extraction of relevant metrics of SAR and optical satellite data for crop monitoring.
+SCOUT-sentinel-processor automates the acquisition, processing, and statistiacl extraction of relevant metrics of SAR and optical satellite data for crop monitoring.
 
 ### Key Capabilities
 
@@ -45,7 +45,7 @@ SCOUT_preprocess automates the acquisition, processing, and statistiacl extracti
 ## Architecture
 
 ```
-SCOUT_preprocess/
+SCOUT-sentinel-processor/
 ├── config/                 # Configuration files
 │   └── config.yml         # Main configuration
 ├── sentinel1/             # Sentinel-1 processing modules
