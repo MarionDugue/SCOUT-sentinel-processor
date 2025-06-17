@@ -14,6 +14,7 @@ import rasterio
 from pathlib import Path
 import os
 import yaml
+import re
 
 def log_info(message: str):
     """Log an informational message with timestamp."""
@@ -24,6 +25,64 @@ def log_error(message: str):
     """Log an error message with timestamp."""
     ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f"[ERROR] {ts} Step: {message}", file=sys.stderr)
+
+def extract_orbit_info(scene_id: str, acquisition_time: str) -> tuple:
+    """
+    Extract orbit direction and relative orbit from scene ID and acquisition time.
+    
+    Args:
+        scene_id: Sentinel-1 scene identifier
+        acquisition_time: Acquisition time in ISO format
+        
+    Returns:
+        tuple: (orbit_direction, relative_orbit)
+    """
+    try:
+        # Parse acquisition time to get hour
+        acq_datetime = pd.to_datetime(acquisition_time)
+        hour = acq_datetime.hour
+        
+        # Determine orbit direction based on hour
+        # Based on the reference code: if hour is 5, it's Descending, otherwise Ascending
+        orbit_direction = 'Descending' if hour == 5 else 'Ascending'
+        
+        # Extract absolute orbit number from scene ID
+        # Sentinel-1 scene ID format: S1A_IW_SLC__1SDV_20240101T060000_20240101T060030_051234_062345_1234.SAFE
+        # The absolute orbit number is typically in the 6th position after splitting by '_'
+        scene_parts = scene_id.split('_')
+        
+        if len(scene_parts) >= 6:
+            # Try to extract absolute orbit from the 6th position
+            absolute_orbit_str = scene_parts[5]
+            
+            # Clean the string to get only digits
+            absolute_orbit_match = re.search(r'(\d+)', absolute_orbit_str)
+            if absolute_orbit_match:
+                absolute_orbit = int(absolute_orbit_match.group(1))
+                
+                # Determine satellite from scene ID
+                satellite = scene_parts[0]  # S1A or S1B
+                
+                # Calculate relative orbit based on satellite
+                if satellite == 'S1A':
+                    relative_orbit = ((absolute_orbit - 73) % 175) + 1
+                elif satellite == 'S1B':
+                    relative_orbit = ((absolute_orbit - 27) % 175) + 1
+                else:
+                    log_error(f"Unknown satellite in scene ID: {satellite}")
+                    relative_orbit = None
+            else:
+                log_error(f"Could not extract absolute orbit from scene ID: {scene_id}")
+                relative_orbit = None
+        else:
+            log_error(f"Scene ID format not recognized: {scene_id}")
+            relative_orbit = None
+        
+        return orbit_direction, relative_orbit
+        
+    except Exception as e:
+        log_error(f"Failed to extract orbit info from scene {scene_id}: {e}")
+        return None, None
 
 def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, data_epsia: np.ndarray, scene_id: str, field_id: str) -> dict:
     """Extract statistics from backscatter data (VV/VH/epsIA)."""
@@ -149,12 +208,18 @@ def extract_stats(input_path: str, scene_id: str, field_id: str, acquisition_tim
                 if stats is None:
                     return None
 
+            # Extract orbit information
+            log_info("extracting_orbit_information")
+            orbit_direction, relative_orbit = extract_orbit_info(scene_id, acquisition_time)
+            
             # Add common fields
             stats.update({
                 "scene_id": scene_id,
                 "field_id": field_id,
                 "acquisition_time": pd.to_datetime(acquisition_time),
-                "data_type": "poldecomp" if is_poldecomp else "backscatter"
+                "data_type": "poldecomp" if is_poldecomp else "backscatter",
+                "orbit_direction": orbit_direction,
+                "relative_orbit": relative_orbit
             })
 
             log_info(f"Statistics computed successfully for {scene_id}")
