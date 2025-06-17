@@ -130,23 +130,24 @@ sentinel2:
 
 #### Complete Pipeline
 ```bash
-cd sentinel1
-./run_pipeline.sh
+cd scripts
+./run_sentinel1.sh
+./run_sentinel2.sh
 ```
 
 #### Individual Steps
 ```bash
 # Find available scenes
-python s1_find_ids.py --config ../config/config.yml
+python sentinel1/s1_find_ids.py --config config/config.yml
 
 # Download scenes
-python s1_download_from_csv.py --config ../config/config.yml
+python sentinel1/s1_download_from_csv.py --config config/config.yml
 
 # Subset to fields
-python subset_raster.py --config ../config/config.yml
+python sentinel1/subset_raster.py --config config/config.yml
 
 # Extract statistics
-python extract_stats.py --config ../config/config.yml
+python sentinel1/extract_stats.py --config config/config.yml
 ```
 
 ### Sentinel-2 Processing

@@ -110,8 +110,6 @@ def extract_backscatter_stats(data_vv: np.ndarray, data_vh: np.ndarray, data_eps
         "variance_VH": float(np.var(data_vh)),
         "min_VH": float(np.min(data_vh)),
         "max_VH": float(np.max(data_vh)),
-        "mean_epsIA": mean_epsia,
-        "variance_epsIA": float(np.var(data_epsia)),
         "min_epsIA": float(np.min(data_epsia)),
         "max_epsIA": float(np.max(data_epsia)),
     }
@@ -144,8 +142,6 @@ def extract_poldecomp_stats(data_entropy: np.ndarray, data_anisotropy: np.ndarra
         "variance_alpha": float(np.var(data_alpha)),
         "min_alpha": float(np.min(data_alpha)),
         "max_alpha": float(np.max(data_alpha)),
-        "mean_epsIA": mean_epsia,
-        "variance_epsIA": float(np.var(data_epsia)),
         "min_epsIA": float(np.min(data_epsia)),
         "max_epsIA": float(np.max(data_epsia)),
     }
