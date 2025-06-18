@@ -14,7 +14,8 @@ A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite d
 
 ## Overview
 
-SCOUT-sentinel-processor automates the acquisition, processing, and statistiacl extraction of relevant metrics of SAR and optical satellite data for crop monitoring.
+SCOUT-sentinel-processor automates the acquisition, processing, and statistical extraction of relevant metrics of SAR (eg. radar backscatter, entropy, alpha angles) and optical (NDVI) satellite data for crop monitoring.
+
 
 ### Key Capabilities
 
@@ -46,15 +47,15 @@ SCOUT-sentinel-processor automates the acquisition, processing, and statistiacl 
 
 ```
 SCOUT-sentinel-processor/
-├── config/                 # Configuration files
+├── config/                 
 │   └── config.yml         # Main configuration
-├── sentinel1/             # Sentinel-1 processing modules
+├── sentinel1/             
 │   ├── s1_find_ids.py     # Scene discovery
 │   ├── s1_download_from_csv.py  # Data download
 │   ├── subset_raster.py   # Field subsetting
 │   ├── extract_stats.py   # Statistical extraction
 │   └── snap_graphs/       # SNAP processing graphs
-├── sentinel2/             # Sentinel-2 processing modules
+├── sentinel2/             
 │   ├── cli.py            # Command-line interface
 │   ├── ndvi_exporter.py  # NDVI computation
 │   └── extract_ndvi_stats.py  # Statistics extraction
@@ -122,7 +123,8 @@ sentinel2:
 ```
 
 ## Usage
-Sentinel-1 and Sentinel-2 preprocessing are done independently and do not rely on one another aside from sharing the same area of interest and timespan inpotuted in the config file. 
+Sentinel-1 and Sentinel-2 preprocessing are done independently and do not rely on one another aside from sharing the same area of interest and timespan inputted in the config file. 
+
 
 ### Sentinel-1 Processing
 
@@ -133,6 +135,7 @@ cd scripts
 ```
 
 #### Individual Steps
+Either toggle 1 and 0 where wanted in the config file. All steps can work independently (ie only one step can be 1 whilst all the others are 0). Another way to run individual steps could be through their python script directly: 
 ```bash
 # Find available scenes
 python sentinel1/s1_find_ids.py --config config/config.yml
@@ -149,9 +152,14 @@ python sentinel1/extract_stats.py --config config/config.yml
 
 ### Sentinel-2 Processing
 
+#### Complete Pipeline
 ```bash
-cd sentinel2
+cd scripts
+./run_sentinel2.sh
+```
 
+#### Individual Steps
+```bash
 # NDVI export with statistics
 python cli.py --config ../config/config.yml --extract_stats
 

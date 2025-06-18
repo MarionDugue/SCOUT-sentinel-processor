@@ -41,13 +41,13 @@ def download_scene(
     url = base_url.format(product_id)
     headers = {"Authorization": f"Bearer {access_token}"}
 
-    logging.info(f"[DOWNLOAD] Starting download for product {product_id}")
+    logging.info(f"Starting download for product {product_id}")
     response = requests.get(url, headers=headers, stream=True)
     if response.status_code != 200:
         logging.error(
-            f"[DOWNLOAD] Failed to download product {product_id}. Status code: {response.status_code}"
+            f"Failed to download product {product_id}. Status code: {response.status_code}"
         )
-        logging.error(f"[DOWNLOAD] Response content: {response.content}")
+        logging.error(f"Response content: {response.content}")
         return None
 
     total_size = int(response.headers.get("content-length", 0))
@@ -63,7 +63,7 @@ def download_scene(
         ):
             if chunk:
                 tmp_file.write(chunk)
-    logging.info("[DOWNLOAD] Download complete. Processing archive...")
+    logging.info("Download complete. Processing archive...")
 
     try:
         with zipfile.ZipFile(temp_file_path, "r") as zip_ref:
@@ -79,10 +79,10 @@ def download_scene(
             if not safe_folder:
                 safe_folder = product_id
                 logging.warning(
-                    "[DOWNLOAD] No .SAFE folder found in archive, using product id as folder name"
+                    "No .SAFE folder found in archive, using product id as folder name"
                 )
             else:
-                logging.info(f"[DOWNLOAD] .SAFE folder detected: {safe_folder}")
+                logging.info(f".SAFE folder detected: {safe_folder}")
 
             new_zip_path = os.path.join(base_file_path, f"{safe_folder}.zip")
             with zipfile.ZipFile(
@@ -98,7 +98,7 @@ def download_scene(
                         else:
                             file_data = zip_ref.read(info)
                             new_zip.writestr(new_name, file_data)
-            logging.info(f"[DOWNLOAD] Saved filtered zip to {new_zip_path}")
+            logging.info(f"Saved zip to {new_zip_path}")
     finally:
         os.remove(temp_file_path)
 
@@ -114,11 +114,11 @@ def delete_zip_file(zip_path: str) -> None:
     try:
         if os.path.exists(zip_path):
             os.remove(zip_path)
-            logging.info(f"[DOWNLOAD] Deleted zip file: {zip_path}")
+            logging.info(f"Deleted zip file: {zip_path}")
         else:
-            logging.warning(f"[DOWNLOAD] Zip file not found for deletion: {zip_path}")
+            logging.warning(f"Zip file not found for deletion: {zip_path}")
     except Exception as e:
-        logging.error(f"[DOWNLOAD] Failed to delete zip file {zip_path}: {e}")
+        logging.error(f"Failed to delete zip file {zip_path}: {e}")
 
 
 def main():
@@ -147,7 +147,7 @@ def main():
     # Get the delete_zip_after_preprocess setting from config, default to False
     delete_after_processing = s1_cfg.get("delete_zip_after_preprocess", False)
     if delete_after_processing:
-        logging.info("[DOWNLOAD] Zip file deletion after processing is enabled")
+        logging.info("Zip file deletion after processing is enabled")
 
     # Use output_dir CLI argument if provided; else fallback to config
     if args.output_dir:
@@ -160,27 +160,27 @@ def main():
 
     if not username or not password:
         logging.error(
-            "[DOWNLOAD] Username or password missing in config under 'copernicus_credentials'"
+            "Username or password missing in config under 'copernicus_credentials'"
         )
         return
 
     try:
         access_token = get_access_token(username, password)
     except Exception as e:
-        logging.error(f"[DOWNLOAD] Failed to get access token: {e}")
+        logging.error(f"Failed to get access token: {e}")
         return
 
     downloaded_path = download_scene(
         args.product_id, access_token, base_file_path, base_url
     )
     if downloaded_path:
-        logging.info(f"[DOWNLOAD] Download finished successfully: {downloaded_path}")
+        logging.info(f"Download finished successfully: {downloaded_path}")
         
         # Delete the zip file if enabled in config
         if delete_after_processing:
             delete_zip_file(downloaded_path)
     else:
-        logging.error("[DOWNLOAD] Download failed.")
+        logging.error("Download failed.")
 
 
 if __name__ == "__main__":
