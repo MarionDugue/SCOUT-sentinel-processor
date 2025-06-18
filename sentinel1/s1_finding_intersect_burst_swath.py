@@ -60,7 +60,7 @@ def load_config(config_file):
             config = yaml.safe_load(f)
 
         # Validate required sections
-        required_sections = ['input', 'sentinel1', 'pre-processing']
+        required_sections = ['input', 'sentinel1']
         for section in required_sections:
             if section not in config:
                 raise ValueError(

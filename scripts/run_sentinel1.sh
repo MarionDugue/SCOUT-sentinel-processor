@@ -94,6 +94,7 @@ RUN_FIND_IDS="$(get_yaml_value workflow.find_ids)"
 RUN_DOWNLOAD="$(get_yaml_value workflow.download)"
 SKIP_EXISTING="$(get_yaml_value workflow.skip_existing)"
 RUN_PREPROCESS="$(get_yaml_value workflow.pre_process)"
+DELETE_ZIP_AFTER_DOWNLOAD="$(get_yaml_value workflow.delete_zip_after_download)"
 RUN_SUBSET="$(get_yaml_value workflow.subset)"
 RUN_EXTRACT_METRIC="$(get_yaml_value workflow.extract_metric)"
 
@@ -103,11 +104,12 @@ log_info "  find_ids: $RUN_FIND_IDS"
 log_info "  download: $RUN_DOWNLOAD"
 log_info "  skip_existing: $SKIP_EXISTING"
 log_info "  pre_process: $RUN_PREPROCESS"
+log_info "  delete_zip_after_download: $DELETE_ZIP_AFTER_DOWNLOAD"
 log_info "  subset: $RUN_SUBSET"
 log_info "  extract_metric: $RUN_EXTRACT_METRIC"
 
 # Validate workflow toggles
-for var in RUN_FIND_IDS RUN_DOWNLOAD SKIP_EXISTING RUN_PREPROCESS RUN_SUBSET RUN_EXTRACT_METRIC; do
+for var in RUN_FIND_IDS RUN_DOWNLOAD SKIP_EXISTING RUN_PREPROCESS DELETE_ZIP_AFTER_DOWNLOAD RUN_SUBSET RUN_EXTRACT_METRIC; do
     if ! [[ "${!var}" =~ ^[01]$ ]]; then
         log_error "Invalid value for $var: ${!var}. Must be 0 or 1."
         exit 1
@@ -240,17 +242,26 @@ scene_exists() {
     [ -f "${download_dir}/${product_id}.zip" ] || [ -d "${download_dir}/${product_id}.SAFE" ]
 }
 
+# Function to check if scene exists by scene name
+scene_exists_by_name() {
+    local scene_name="$1"
+    local download_dir="$(get_yaml_value sentinel1.download_dir)"
+    # Check for both .zip and .SAFE directories
+    [ -f "${download_dir}/${scene_name}.zip" ] || [ -d "${download_dir}/${scene_name}.SAFE" ]
+}
+
 # Function to run download script
 run_download() {
     local product_id="$1"
+    local scene_name="$2"
     local download_dir="$(get_yaml_value sentinel1.download_dir)"
     
     log_info "Processing product: $product_id"
     log_info "  Download directory: $download_dir"
     
     # Skip if scene exists and skip_existing is enabled
-    if (( SKIP_EXISTING )) && scene_exists "$product_id"; then
-        log_info "Skipping existing scene: $product_id"
+    if (( SKIP_EXISTING )) && scene_exists_by_name "$scene_name"; then
+        log_info "Skipping existing scene: $scene_name"
         return 0
     fi
 
@@ -259,10 +270,10 @@ run_download() {
     if python3 "$DOWNLOAD_SCRIPT" --product_id "$product_id" --config "$CONFIG_FILE" \
         2> >(tee -a "$ERROR_LOG" >&2); then
         log_info "Download successful for product: $product_id"
-        if scene_exists "$product_id"; then
-            log_info "Verified product exists after download: $product_id"
+        if scene_exists_by_name "$scene_name"; then
+            log_info "Verified product exists after download: $scene_name"
         else
-            log_error "Product not found after download: $product_id"
+            log_error "Product not found after download: $scene_name"
         fi
         return 0
     else
@@ -284,9 +295,9 @@ run_download_all() {
     local success_count=0
     local total_count=0
     
-    while IFS=',' read -r product_id rest; do
+    while IFS=',' read -r product_id scene_name rest; do
         # Skip header line
-        if [[ "$product_id" == "product_id" ]]; then
+        if [[ "$product_id" == "Id" ]]; then
             continue
         fi
         
@@ -296,7 +307,7 @@ run_download_all() {
         fi
         
         ((total_count++))
-        if run_download "$product_id"; then
+        if run_download "$product_id" "$scene_name"; then
             ((success_count++))
         fi
     done < "$CSV_FILE"
@@ -455,6 +466,40 @@ for i, graph in enumerate(graphs):
     return 0
 }
 
+# Function to delete zip file after successful pre-processing
+delete_zip_after_preprocess() {
+    local scene_name="$1"
+    local download_dir="$(get_yaml_value sentinel1.download_dir)"
+    
+    if (( ! DELETE_ZIP_AFTER_DOWNLOAD )); then
+        log_info "Zip deletion disabled, keeping zip files"
+        return 0
+    fi
+    
+    # The download script creates zip files with .SAFE.zip extension
+    # So we need to look for {scene_name}.SAFE.zip
+    local zip_file="${download_dir}/${scene_name}.SAFE.zip"
+    
+    if [ ! -f "$zip_file" ]; then
+        log_info "Zip file not found, nothing to delete: $zip_file"
+        # List available zip files for debugging
+        log_info "Available zip files in $download_dir:"
+        find "$download_dir" -maxdepth 1 -name "*.zip" -exec basename {} \; 2>/dev/null | while read -r file; do
+            log_info "  $file"
+        done
+        return 0
+    fi
+    
+    log_info "Deleting zip file after successful pre-processing: $zip_file"
+    if rm -f "$zip_file"; then
+        log_info "Successfully deleted zip file: $zip_file"
+        return 0
+    else
+        log_error "Failed to delete zip file: $zip_file"
+        return 1
+    fi
+}
+
 # Function to run pre-processing for all products
 run_preprocess_all() {
     if [ ! -f "$CSV_FILE" ]; then
@@ -468,9 +513,9 @@ run_preprocess_all() {
     local success_count=0
     local total_count=0
     
-    while IFS=',' read -r product_id rest; do
+    while IFS=',' read -r product_id scene_name rest; do
         # Skip header line
-        if [[ "$product_id" == "product_id" ]]; then
+        if [[ "$product_id" == "Id" ]]; then
             continue
         fi
         
@@ -480,7 +525,7 @@ run_preprocess_all() {
         fi
         
         ((total_count++))
-        if run_preprocess "$product_id" "$product_id"; then
+        if run_preprocess "$product_id" "$scene_name" && delete_zip_after_preprocess "$scene_name"; then
             ((success_count++))
         fi
     done < "$CSV_FILE"
