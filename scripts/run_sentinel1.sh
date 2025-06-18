@@ -250,13 +250,13 @@ scene_exists_by_name() {
     [ -f "${download_dir}/${scene_name}.zip" ] || [ -d "${download_dir}/${scene_name}.SAFE" ]
 }
 
-# Function to run download script
+# Function to run download for a single product
 run_download() {
     local product_id="$1"
     local scene_name="$2"
     local download_dir="$(get_yaml_value sentinel1.download_dir)"
     
-    log_info "Processing product: $product_id"
+    log_info "Processing scene: $scene_name"
     log_info "  Download directory: $download_dir"
     
     # Skip if scene exists and skip_existing is enabled
@@ -265,58 +265,19 @@ run_download() {
         return 0
     fi
 
-    log_info "Starting download for product: $product_id"
+    log_info "Starting download for scene: $scene_name"
     log_info "Running command: python3 $DOWNLOAD_SCRIPT --product_id $product_id --config $CONFIG_FILE"
     if python3 "$DOWNLOAD_SCRIPT" --product_id "$product_id" --config "$CONFIG_FILE" \
         2> >(tee -a "$ERROR_LOG" >&2); then
-        log_info "Download successful for product: $product_id"
+        log_info "Download successful for scene: $scene_name"
         if scene_exists_by_name "$scene_name"; then
-            log_info "Verified product exists after download: $scene_name"
+            log_info "Verified scene exists after download: $scene_name"
         else
-            log_error "Product not found after download: $scene_name"
+            log_error "Scene not found after download: $scene_name"
         fi
         return 0
     else
-        log_error "Download failed for product: $product_id"
-        return 1
-    fi
-}
-
-# Function to run download for all products
-run_download_all() {
-    if [ ! -f "$CSV_FILE" ]; then
-        log_error "CSV file not found: $CSV_FILE"
-        return 1
-    fi
-    
-    log_info "Starting download for all products from: $CSV_FILE"
-    
-    # Skip header line and process each product
-    local success_count=0
-    local total_count=0
-    
-    while IFS=',' read -r product_id scene_name rest; do
-        # Skip header line
-        if [[ "$product_id" == "Id" ]]; then
-            continue
-        fi
-        
-        # Skip empty lines
-        if [ -z "$product_id" ]; then
-            continue
-        fi
-        
-        ((total_count++))
-        if run_download "$product_id" "$scene_name"; then
-            ((success_count++))
-        fi
-    done < "$CSV_FILE"
-    
-    log_info "Download summary: $success_count of $total_count products processed successfully"
-    
-    if [ $success_count -eq $total_count ]; then
-        return 0
-    else
+        log_error "Download failed for scene: $scene_name"
         return 1
     fi
 }
@@ -336,7 +297,7 @@ run_preprocess() {
     final_dir="${final_dir/\{download_dir\}/$download_dir}"
     mkdir -p "$intermediate_dir" "$final_dir"
     
-    log_info "Starting pre-processing for product: $product_id"
+    log_info "Starting pre-processing for scene: $scene_name"
     log_info "Debug information:"
     log_info "  Download directory: $download_dir"
     log_info "  Scene name: $scene_name"
@@ -462,7 +423,7 @@ for i, graph in enumerate(graphs):
         fi
     done
     
-    log_info "Pre-processing completed successfully for product: $product_id"
+    log_info "Pre-processing completed successfully for scene: $scene_name"
     return 0
 }
 
@@ -500,16 +461,64 @@ delete_zip_after_preprocess() {
     fi
 }
 
-# Function to run pre-processing for all products
-run_preprocess_all() {
+# Function to process a single file completely (download -> preprocess -> delete)
+run_process_file_complete() {
+    local product_id="$1"
+    local scene_name="$2"
+    local success=false
+    
+    log_info "=== Starting complete processing for scene: $scene_name ==="
+    
+    # Step 1: Download (if enabled)
+    if (( RUN_DOWNLOAD )); then
+        log_info "Step 1: Downloading scene: $scene_name"
+        if ! run_download "$product_id" "$scene_name"; then
+            log_error "Download failed for scene: $scene_name"
+            return 1
+        fi
+        log_info "Download completed successfully for scene: $scene_name"
+    else
+        log_info "Download step disabled, skipping"
+    fi
+    
+    # Step 2: Preprocess (if enabled)
+    if (( RUN_PREPROCESS )); then
+        log_info "Step 2: Preprocessing scene: $scene_name"
+        if ! run_preprocess "$product_id" "$scene_name"; then
+            log_error "Preprocessing failed for scene: $scene_name"
+            return 1
+        fi
+        log_info "Preprocessing completed successfully for scene: $scene_name"
+        
+        # Step 2.5: Delete zip file immediately after successful preprocessing
+        if (( DELETE_ZIP_AFTER_DOWNLOAD )); then
+            log_info "Step 2.5: Deleting zip file for scene: $scene_name"
+            if ! delete_zip_after_preprocess "$scene_name"; then
+                log_error "Zip deletion failed for scene: $scene_name"
+                return 1
+            fi
+            log_info "Zip file deleted successfully for scene: $scene_name"
+        else
+            log_info "Zip deletion disabled, keeping zip file"
+        fi
+    else
+        log_info "Preprocessing step disabled, skipping"
+    fi
+    
+    log_info "=== Completed processing for scene: $scene_name ==="
+    return 0
+}
+
+# Function to process all files completely (one by one)
+run_process_all_files_complete() {
     if [ ! -f "$CSV_FILE" ]; then
         log_error "CSV file not found: $CSV_FILE"
         return 1
     fi
     
-    log_info "Starting pre-processing for all products from: $CSV_FILE"
+    log_info "Starting complete processing for all products from: $CSV_FILE"
     
-    # Skip header line and process each product
+    # Skip header line and process each product completely
     local success_count=0
     local total_count=0
     
@@ -525,12 +534,12 @@ run_preprocess_all() {
         fi
         
         ((total_count++))
-        if run_preprocess "$product_id" "$scene_name" && delete_zip_after_preprocess "$scene_name"; then
+        if run_process_file_complete "$product_id" "$scene_name"; then
             ((success_count++))
         fi
     done < "$CSV_FILE"
     
-    log_info "Pre-processing summary: $success_count of $total_count products processed successfully"
+    log_info "Complete processing summary: $success_count of $total_count products processed successfully"
     
     if [ $success_count -eq $total_count ]; then
         return 0
@@ -722,19 +731,20 @@ if (( RUN_FIND_IDS )); then
     run_find_ids || exit 1
 fi
 
-if (( RUN_DOWNLOAD )); then
-    run_download_all || exit 1
-fi
-
-if (( RUN_PREPROCESS )); then
-    run_preprocess_all || exit 1
+# Process files completely (download -> preprocess -> delete) one by one
+if (( RUN_DOWNLOAD || RUN_PREPROCESS )); then
+    log_info "Starting complete file processing (download -> preprocess -> delete) for each file individually"
+    run_process_all_files_complete || exit 1
+    log_info "Completed all individual file processing"
 fi
 
 if (( RUN_SUBSET )); then
+    log_info "Starting subsetting step (processes all preprocessed files)"
     run_subset || exit 1
 fi
 
 if (( RUN_EXTRACT_METRIC )); then
+    log_info "Starting metric extraction step (processes all subset files)"
     run_extract_metric || exit 1
 fi
 
