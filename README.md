@@ -16,6 +16,7 @@ A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite d
 
 SCOUT-sentinel-processor automates the acquisition, processing, and statistical extraction of relevant metrics of SAR (eg. radar backscatter, entropy, alpha angles) and optical (NDVI) satellite data for crop monitoring.
 
+
 ### Key Capabilities
 
 - **Sentinel-1 Processing**: Automated SAR data acquisition, SNAP preprocessing, and statistical extraction
@@ -123,6 +124,7 @@ sentinel2:
 
 ## Usage
 Sentinel-1 and Sentinel-2 preprocessing are done independently and do not rely on one another aside from sharing the same area of interest and timespan inputted in the config file. 
+
 
 ### Sentinel-1 Processing
 
