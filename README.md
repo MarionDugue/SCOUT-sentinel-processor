@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837326.svg)](https://doi.org/10.5281/zenodo.15837326)
+
+
 # SCOUT-sentinel-processor
 
 A comprehensive preprocessing pipeline for Sentinel-1 and Sentinel-2 satellite data, designed for agricultural remote sensing applications.
